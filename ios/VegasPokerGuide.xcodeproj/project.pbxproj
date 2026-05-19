@@ -17,6 +17,7 @@
 		24B7D3FEBD30AA9F9754990A /* DayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79E122638CF34C56BC54D6 /* DayHeader.swift */; };
 		28A5C8B0D81B387BF7FB94DC /* ScheduleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */; };
 		2A44D6D6F439DD9AC0A6E061 /* GameCategoryStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827494EA765301AA54437E1 /* GameCategoryStyle.swift */; };
+		2D0CA465517BFD247F2877EA /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25B8CCCA65E5A517352BEEF /* EventDetail.swift */; };
 		3FBF06BCC2D17E94CB20329F /* VegasPokerGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */; };
 		4E9A369FF86E764D70AB6EEF /* CountdownStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EAEFD962C35B7E01C29438 /* CountdownStateTests.swift */; };
 		511CBF0EBA652AAEA2B3D0D7 /* FilterPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF56CCBBCD8A3AA7F8DD472 /* FilterPredicate.swift */; };
@@ -96,6 +97,7 @@
 		B19E7A02D4E0783B7DF8FE5C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatter.swift; sourceTree = "<group>"; };
 		BDCC072E3C8569F2919E57BC /* tournaments_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tournaments_seed.json; sourceTree = "<group>"; };
+		C25B8CCCA65E5A517352BEEF /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
 		C3F58F6D888EC1FD44FA4FC2 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
 		CDD2A460C058E6DCC76B1190 /* GameCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategory.swift; sourceTree = "<group>"; };
 		D9307B6A8C243954E599411D /* VegasPokerGuide.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VegasPokerGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 		0344711E01FDA829B77FD92D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C25B8CCCA65E5A517352BEEF /* EventDetail.swift */,
 				6597D2417ADA335B83746B62 /* FiltersSheet.swift */,
 				A46D9E18AD0DC5448AE3F908 /* RootTabs.swift */,
 				4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */,
@@ -405,6 +408,7 @@
 				70B5A15666232B52F4C13F3C /* CountdownBadge.swift in Sources */,
 				8FB8AA94C3C3BACAF876E44E /* CountdownState.swift in Sources */,
 				24B7D3FEBD30AA9F9754990A /* DayHeader.swift in Sources */,
+				2D0CA465517BFD247F2877EA /* EventDetail.swift in Sources */,
 				5298FE2E403152E170C7E282 /* EventRow.swift in Sources */,
 				0C90E058C33C7EF43BA5B627 /* FavoritesStore.swift in Sources */,
 				E74C89736DA841E1B64BF880 /* FeedCache.swift in Sources */,
