@@ -29,7 +29,6 @@ targets:
         UILaunchScreen:
           UIColorName: ""
         NSCalendarsUsageDescription: "Vegas Poker uses Calendar to add tournaments you star to your schedule."
-        NSUserNotificationUsageDescription: "Vegas Poker schedules local reminders before late registration closes for events you star."
     settings:
       base:
         TARGETED_DEVICE_FAMILY: "1"

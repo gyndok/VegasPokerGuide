@@ -9,6 +9,24 @@ struct FiltersSheet: View {
 
         NavigationStack {
             Form {
+                Section("Date") {
+                    Button("Today") { setRange(.today) }
+                    Button("Tomorrow") { setRange(.tomorrow) }
+                    Button("This Weekend") { setRange(.thisWeekend) }
+                    Button("Next 7 Days") { setRange(.next7) }
+                    Button("All dates") {
+                        bindable.filters.dateStart = nil
+                        bindable.filters.dateEnd = nil
+                    }
+                    if let start = state.filters.dateStart, let end = state.filters.dateEnd {
+                        LabeledContent("Range") {
+                            Text("\(start.formatted(date: .abbreviated, time: .omitted)) → \(end.formatted(date: .abbreviated, time: .omitted))")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+
                 Section("Venues") {
                     ForEach(state.venues) { v in
                         Toggle(v.displayName, isOn: Binding(
@@ -92,6 +110,34 @@ struct FiltersSheet: View {
                     Button("Done") { dismiss() }
                 }
             }
+        }
+    }
+
+    private enum DatePreset { case today, tomorrow, thisWeekend, next7 }
+
+    private func setRange(_ preset: DatePreset) {
+        @Bindable var bindable = state
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = TimeZone(identifier: "America/Los_Angeles")!
+        let today = cal.startOfDay(for: Date())
+        switch preset {
+        case .today:
+            bindable.filters.dateStart = today
+            bindable.filters.dateEnd = today
+        case .tomorrow:
+            let tomorrow = cal.date(byAdding: .day, value: 1, to: today)!
+            bindable.filters.dateStart = tomorrow
+            bindable.filters.dateEnd = tomorrow
+        case .thisWeekend:
+            let weekday = cal.component(.weekday, from: today)  // 1=Sun..7=Sat
+            let daysToSaturday = (7 - weekday) % 7
+            let saturday = cal.date(byAdding: .day, value: daysToSaturday, to: today)!
+            let sunday = cal.date(byAdding: .day, value: 1, to: saturday)!
+            bindable.filters.dateStart = saturday
+            bindable.filters.dateEnd = sunday
+        case .next7:
+            bindable.filters.dateStart = today
+            bindable.filters.dateEnd = cal.date(byAdding: .day, value: 6, to: today)!
         }
     }
 }

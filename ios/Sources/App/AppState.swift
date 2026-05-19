@@ -36,6 +36,7 @@ final class AppState {
         } else {
             loadBundledSeed()
         }
+        await notifier.requestAuthorizationIfNeeded()
         await refresh()
     }
 

@@ -6,7 +6,6 @@ struct EventDetail: View {
     @Environment(\.dismiss) private var dismiss
     @State private var noteDraft: String = ""
     @State private var playedCashed: String = ""
-    @State private var notifyEnabled: Bool = false
 
     private static let timePT: DateFormatter = {
         let f = DateFormatter()
@@ -95,6 +94,14 @@ struct EventDetail: View {
                             Label("Add to Calendar", systemImage: "calendar.badge.plus")
                                 .frame(maxWidth: .infinity)
                         }
+                        .buttonStyle(.bordered)
+                        Toggle(isOn: Binding(
+                            get: { state.isStarred(tournament.id) },
+                            set: { _ in Task { await state.toggleStar(tournament) } }
+                        )) {
+                            Label("Notify 30 min before LR", systemImage: "bell.badge")
+                        }
+                        .toggleStyle(.button)
                         .buttonStyle(.bordered)
                     }
 

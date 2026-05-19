@@ -22,9 +22,7 @@
 	<string>1</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Vegas Poker uses Calendar to add tournaments you star to your schedule.</string>
-	<key>NSUserNotificationUsageDescription</key>
-	<string>Vegas Poker schedules local reminders before late registration closes for events you star.</string>
-	<key>UILaunchScreen</key>
+<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
 		<string></string>

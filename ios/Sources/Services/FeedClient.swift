@@ -10,7 +10,7 @@ final class FeedClient {
     init(session: URLSession = .shared) { self.session = session }
 
     func fetch(_ url: URL, ifNoneMatch etag: String?) async throws -> FeedFetchResult {
-        var req = URLRequest(url: url)
+        var req = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
         if let etag { req.setValue(etag, forHTTPHeaderField: "If-None-Match") }
         let (data, response) = try await session.data(for: req)
         guard let http = response as? HTTPURLResponse else {
