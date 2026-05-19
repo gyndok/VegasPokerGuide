@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00883FB9406B3EC3F6AF6BA0 /* ReEntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */; };
 		02BE7777583D5AD349F81FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E390ACDBF56732C2089CCCE /* Assets.xcassets */; };
+		081C4D036BF9B227232AE7CB /* PlayedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB89C8CAA3BA32F28827BF9 /* PlayedTab.swift */; };
 		0920601DD68201328DFE0DF7 /* FilterPredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396B046CB49E09808AEA8AA4 /* FilterPredicateTests.swift */; };
 		0C90E058C33C7EF43BA5B627 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F58F6D888EC1FD44FA4FC2 /* FavoritesStore.swift */; };
 		172ED31F55BDF4CA534CFED0 /* FeedDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713ED26C7D061852142D83A3 /* FeedDocuments.swift */; };
@@ -66,6 +67,7 @@
 		0201BA7B023B691AB3635CB4 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		08B2B0631573ED8F3AE740B2 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		08C59425EB78D5C34CF7C87C /* FeedClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClient.swift; sourceTree = "<group>"; };
+		0AB89C8CAA3BA32F28827BF9 /* PlayedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayedTab.swift; sourceTree = "<group>"; };
 		1827494EA765301AA54437E1 /* GameCategoryStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoryStyle.swift; sourceTree = "<group>"; };
 		18C6BC2086D728A099FE0D7B /* GameCategoryChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoryChip.swift; sourceTree = "<group>"; };
 		1E390ACDBF56732C2089CCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C25B8CCCA65E5A517352BEEF /* EventDetail.swift */,
 				6597D2417ADA335B83746B62 /* FiltersSheet.swift */,
 				F5C1A50AEF7B7A8916E9ACD6 /* MyScheduleTab.swift */,
+				0AB89C8CAA3BA32F28827BF9 /* PlayedTab.swift */,
 				A46D9E18AD0DC5448AE3F908 /* RootTabs.swift */,
 				4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */,
 				80554B8509EFFA77E8DFBE01 /* Components */,
@@ -426,6 +429,7 @@
 				9AAD7C26E2B1D07176CA5460 /* MapsLauncher.swift in Sources */,
 				37254C180055D5FB9E4A3A41 /* MyScheduleTab.swift in Sources */,
 				18D084C8B24F6C7B4F45E43B /* NotificationScheduler.swift in Sources */,
+				081C4D036BF9B227232AE7CB /* PlayedTab.swift in Sources */,
 				B728686F14433DBD74580ACD /* ReEntry.swift in Sources */,
 				00883FB9406B3EC3F6AF6BA0 /* ReEntryFormatter.swift in Sources */,
 				8C6DF012080603DB7F0320B8 /* RootTabs.swift in Sources */,
