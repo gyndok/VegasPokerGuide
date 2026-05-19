@@ -1,0 +1,92 @@
+name: Update Feed
+on:
+  schedule:
+    - cron: "*/90 * * * *"   # every 90 minutes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: pipeline
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Download sheet
+        run: |
+          mkdir -p .work
+          python - <<'PY'
+          from pathlib import Path
+          from vpf.downloader import download_sheet
+          download_sheet(Path(".work/sheet.xlsx"))
+          PY
+
+      - name: Skip if unchanged
+        id: check
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from vpf.downloader import has_content_changed
+          changed = has_content_changed(Path(".work/sheet.xlsx"), Path(".last_sheet_hash"))
+          print(f"changed={'true' if changed else 'false'}")
+          import os
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"changed={'true' if changed else 'false'}\n")
+          PY
+
+      - name: Run tests
+        if: steps.check.outputs.changed == 'true'
+        run: pytest -v
+
+      - name: Build feed
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          mkdir -p .out
+          python -m vpf.main --xlsx .work/sheet.xlsx --venues venues.yml --out-dir .out
+
+      - name: Configure git user
+        if: steps.check.outputs.changed == 'true'
+        working-directory: ${{ github.workspace }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Publish to data branch
+        if: steps.check.outputs.changed == 'true'
+        working-directory: ${{ github.workspace }}
+        run: |
+          if ! git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git checkout --orphan data
+            git rm -rf .
+            git commit --allow-empty -m "init data branch"
+            git push origin data
+            git checkout main
+          fi
+          git fetch origin data
+          git worktree add /tmp/data-branch origin/data
+          cd /tmp/data-branch
+          git checkout -B data
+          cp -f ${{ github.workspace }}/pipeline/.out/*.json .
+          git add -A
+          git diff --staged --quiet || (git commit -m "data: refresh $(date -u +%FT%TZ)" && git push origin data)
+
+      - name: Commit hash state to main
+        if: steps.check.outputs.changed == 'true'
+        working-directory: ${{ github.workspace }}
+        run: |
+          git add pipeline/.last_sheet_hash
+          git diff --staged --quiet || (git commit -m "chore: bump sheet hash" && git push origin HEAD:main)
