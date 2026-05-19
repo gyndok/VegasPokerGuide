@@ -10,6 +10,7 @@
 		00883FB9406B3EC3F6AF6BA0 /* ReEntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */; };
 		02BE7777583D5AD349F81FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E390ACDBF56732C2089CCCE /* Assets.xcassets */; };
 		0920601DD68201328DFE0DF7 /* FilterPredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396B046CB49E09808AEA8AA4 /* FilterPredicateTests.swift */; };
+		0C90E058C33C7EF43BA5B627 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F58F6D888EC1FD44FA4FC2 /* FavoritesStore.swift */; };
 		172ED31F55BDF4CA534CFED0 /* FeedDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713ED26C7D061852142D83A3 /* FeedDocuments.swift */; };
 		1819556B9DDBBE380A940A1A /* tournaments_seed.json in Resources */ = {isa = PBXBuildFile; fileRef = BDCC072E3C8569F2919E57BC /* tournaments_seed.json */; };
 		3FBF06BCC2D17E94CB20329F /* VegasPokerGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */; };
@@ -17,6 +18,7 @@
 		511CBF0EBA652AAEA2B3D0D7 /* FilterPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF56CCBBCD8A3AA7F8DD472 /* FilterPredicate.swift */; };
 		53089FF1EE5D91C0878FCC09 /* ReEntryFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AD99689C3C08AD818BE8B /* ReEntryFormatterTests.swift */; };
 		56CC4EC3E7C7E976B8BFF406 /* ConflictDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F898DC38DF4AB4A45C6E7C /* ConflictDetectorTests.swift */; };
+		75FE7F9F9B12A2936EFE7597 /* FavoritesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124379B434732A00D6F87E9 /* FavoritesStoreTests.swift */; };
 		7FAFF2ED0A889805CED4312E /* FeedDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967025B276D3EF9211DAA64C /* FeedDecodingTests.swift */; };
 		8FB8AA94C3C3BACAF876E44E /* CountdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800B57BB325DD96B1328839 /* CountdownState.swift */; };
 		B246FAFD6C79868415FB375E /* FeedDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359106E6F79F2E4736A8B11 /* FeedDecoder.swift */; };
@@ -49,6 +51,7 @@
 		2C714D49032B3F7F45343426 /* venues_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venues_sample.json; sourceTree = "<group>"; };
 		396B046CB49E09808AEA8AA4 /* FilterPredicateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPredicateTests.swift; sourceTree = "<group>"; };
 		45F898DC38DF4AB4A45C6E7C /* ConflictDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictDetectorTests.swift; sourceTree = "<group>"; };
+		5124379B434732A00D6F87E9 /* FavoritesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStoreTests.swift; sourceTree = "<group>"; };
 		61EAEFD962C35B7E01C29438 /* CountdownStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownStateTests.swift; sourceTree = "<group>"; };
 		713ED26C7D061852142D83A3 /* FeedDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDocuments.swift; sourceTree = "<group>"; };
 		77D1D9AD2252C3509F56F5F9 /* ConflictDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictDetector.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		A915DECEA1B9512AB66FDAD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatter.swift; sourceTree = "<group>"; };
 		BDCC072E3C8569F2919E57BC /* tournaments_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tournaments_seed.json; sourceTree = "<group>"; };
+		C3F58F6D888EC1FD44FA4FC2 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
 		CDD2A460C058E6DCC76B1190 /* GameCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategory.swift; sourceTree = "<group>"; };
 		D9307B6A8C243954E599411D /* VegasPokerGuide.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VegasPokerGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegasPokerGuideApp.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				45F898DC38DF4AB4A45C6E7C /* ConflictDetectorTests.swift */,
 				61EAEFD962C35B7E01C29438 /* CountdownStateTests.swift */,
+				5124379B434732A00D6F87E9 /* FavoritesStoreTests.swift */,
 				967025B276D3EF9211DAA64C /* FeedDecodingTests.swift */,
 				396B046CB49E09808AEA8AA4 /* FilterPredicateTests.swift */,
 				233AD99689C3C08AD818BE8B /* ReEntryFormatterTests.swift */,
@@ -116,6 +121,7 @@
 		A6A7E8B3EF916206B648345F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C3F58F6D888EC1FD44FA4FC2 /* FavoritesStore.swift */,
 				F359106E6F79F2E4736A8B11 /* FeedDecoder.swift */,
 			);
 			path = Services;
@@ -311,6 +317,7 @@
 			files = (
 				56CC4EC3E7C7E976B8BFF406 /* ConflictDetectorTests.swift in Sources */,
 				4E9A369FF86E764D70AB6EEF /* CountdownStateTests.swift in Sources */,
+				75FE7F9F9B12A2936EFE7597 /* FavoritesStoreTests.swift in Sources */,
 				7FAFF2ED0A889805CED4312E /* FeedDecodingTests.swift in Sources */,
 				0920601DD68201328DFE0DF7 /* FilterPredicateTests.swift in Sources */,
 				53089FF1EE5D91C0878FCC09 /* ReEntryFormatterTests.swift in Sources */,
@@ -323,6 +330,7 @@
 			files = (
 				FAEF8EB1C4A6E8BF25ADC050 /* ConflictDetector.swift in Sources */,
 				8FB8AA94C3C3BACAF876E44E /* CountdownState.swift in Sources */,
+				0C90E058C33C7EF43BA5B627 /* FavoritesStore.swift in Sources */,
 				B246FAFD6C79868415FB375E /* FeedDecoder.swift in Sources */,
 				172ED31F55BDF4CA534CFED0 /* FeedDocuments.swift in Sources */,
 				511CBF0EBA652AAEA2B3D0D7 /* FilterPredicate.swift in Sources */,
