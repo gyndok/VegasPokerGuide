@@ -73,9 +73,23 @@ def write_venues_json(path: Path, venues: list[dict], discovered_urls: list[str]
     path.write_text(json.dumps({"venues": out, "discovered_urls": discovered_urls}, indent=2))
 
 
+def _coerce_raw(value: object) -> object:
+    """Convert non-JSON-serializable cell values (datetime, time, date) to strings."""
+    if isinstance(value, (datetime,)):
+        return value.isoformat()
+    # time and date are not datetime subclasses, import them lazily via check
+    from datetime import time as _time, date as _date
+    if isinstance(value, (_time, _date)):
+        return value.isoformat()
+    return value
+
+
 def write_warnings_json(path: Path, warnings: list[ParseWarning], generated_at: datetime) -> None:
     payload = {
         "generated_at": generated_at.isoformat(timespec="seconds") + ("Z" if generated_at.tzinfo is None else ""),
-        "warnings": [{"row": w.row_number, "issue": w.issue, "raw_row": list(w.raw_row)} for w in warnings],
+        "warnings": [
+            {"row": w.row_number, "issue": w.issue, "raw_row": [_coerce_raw(v) for v in w.raw_row]}
+            for w in warnings
+        ],
     }
     path.write_text(json.dumps(payload, indent=2))
