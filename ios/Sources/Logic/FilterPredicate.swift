@@ -1,7 +1,7 @@
 import Foundation
 
 struct FilterPredicate {
-    enum LateRegStatus { case any, openNow, closingSoon, closed }
+    enum LateRegStatus: Hashable { case any, openNow, closingSoon, closed }
 
     var search: String = ""
     var dateStart: Date? = nil
