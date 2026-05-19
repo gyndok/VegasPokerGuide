@@ -42,3 +42,14 @@ def test_end_to_end_builds_all_outputs(tmp_path: Path, sheet_xlsx: Path):
 
     # parse_warnings.json is well-formed even if empty.
     assert "warnings" in warnings
+
+
+def test_source_sheet_updated_at_is_populated(tmp_path: Path, sheet_xlsx: Path):
+    work = tmp_path / "work"; work.mkdir()
+    shutil.copy(sheet_xlsx, work / "sheet.xlsx")
+    out_dir = tmp_path / "data"; out_dir.mkdir()
+    venues_yml = Path(__file__).parent.parent / "venues.yml"
+    build_feed(xlsx_path=work / "sheet.xlsx", venues_yml=venues_yml, out_dir=out_dir)
+    doc = json.loads((out_dir / "tournaments.json").read_text())
+    assert doc["source_sheet_updated_at"] is not None
+    assert doc["source_sheet_updated_at"].startswith("20")  # year prefix

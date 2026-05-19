@@ -30,6 +30,23 @@ def test_load_venues_returns_eight():
     assert {"wsop-paris", "wynn", "venetian", "aria", "mgm-grand", "orleans", "south-point", "golden-nugget"} == slugs
 
 
+def test_merge_pdf_urls_fills_empty_only():
+    from vpf.venues import merge_pdf_urls
+    venues = [
+        {"slug": "wynn", "structure_pdf_url": "https://existing.example/wynn.pdf", "match_terms": ["Wynn"]},
+        {"slug": "venetian", "structure_pdf_url": "", "match_terms": ["Venetian"]},
+        {"slug": "ghost", "structure_pdf_url": "", "match_terms": ["Ghost"]},
+    ]
+    discovered = [
+        "https://cdn.wynnresorts.com/late.pdf",
+        "https://venetianlasvegas.com/structure.pdf",
+    ]
+    merged = merge_pdf_urls(venues, discovered)
+    assert merged[0]["structure_pdf_url"] == "https://existing.example/wynn.pdf"  # curated wins
+    assert merged[1]["structure_pdf_url"] == "https://venetianlasvegas.com/structure.pdf"
+    assert merged[2]["structure_pdf_url"] == ""  # no match left empty
+
+
 @pytest.mark.parametrize("display,expected", [
     ("Venetian", "venetian"),
     ("Wynn", "wynn"),

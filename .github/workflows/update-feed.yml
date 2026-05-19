@@ -1,7 +1,7 @@
 name: Update Feed
 on:
   schedule:
-    - cron: "*/90 * * * *"   # every 90 minutes
+    - cron: "0 */2 * * *"   # every 2 hours (closest to 90 min cadence; cron's 60-min unit doesn't allow exact 90)
   workflow_dispatch:
 
 permissions:

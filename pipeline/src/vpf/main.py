@@ -5,7 +5,7 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 from vpf.tournaments import parse_list_tab, ParseWarning
-from vpf.venues import extract_schedule_hyperlinks, load_venues, slug_for_venue_display
+from vpf.venues import extract_schedule_hyperlinks, load_venues, slug_for_venue_display, merge_pdf_urls
 from vpf.writers import write_tournaments_json, write_venues_json, write_warnings_json
 
 
@@ -18,6 +18,7 @@ def build_feed(xlsx_path: Path, venues_yml: Path, out_dir: Path) -> None:
     tournaments, warnings = parse_list_tab(wb_data["List"])
     discovered_urls = extract_schedule_hyperlinks(wb_links["Schedule 2026"])
     venues = load_venues(venues_yml)
+    venues = merge_pdf_urls(venues, discovered_urls)
 
     venue_slug_lookup: dict[str, str] = {}
     for t in tournaments:
@@ -35,12 +36,13 @@ def build_feed(xlsx_path: Path, venues_yml: Path, out_dir: Path) -> None:
 
     now = datetime.now(timezone.utc).replace(tzinfo=None)  # plain UTC for ISO 'Z'
 
+    source_mtime = datetime.fromtimestamp(xlsx_path.stat().st_mtime, tz=timezone.utc).replace(tzinfo=None)
     write_tournaments_json(
         out_dir / "tournaments.json",
         tournaments=tournaments,
         venue_slug_lookup=venue_slug_lookup,
         generated_at=now,
-        source_sheet_updated_at=None,  # source mtime is added in GH Action wrapper
+        source_sheet_updated_at=source_mtime,
     )
     write_venues_json(out_dir / "venues.json", venues=venues, discovered_urls=discovered_urls)
     write_warnings_json(out_dir / "parse_warnings.json", warnings=warnings, generated_at=now)
