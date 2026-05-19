@@ -36,6 +36,7 @@
 		8FB8AA94C3C3BACAF876E44E /* CountdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800B57BB325DD96B1328839 /* CountdownState.swift */; };
 		9AAD7C26E2B1D07176CA5460 /* MapsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C01E6D93F0B0275A9503A /* MapsLauncher.swift */; };
 		A32E573CE4142B8A1E7CEA66 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E7A02D4E0783B7DF8FE5C /* Theme.swift */; };
+		AA0E2CADCDE6AEC68265EDE9 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E871E9D868D912F933A274 /* SettingsSheet.swift */; };
 		B246FAFD6C79868415FB375E /* FeedDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359106E6F79F2E4736A8B11 /* FeedDecoder.swift */; };
 		B3748249DFA80B3B0B8F15CF /* venues_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C714D49032B3F7F45343426 /* venues_sample.json */; };
 		B698A4144018048988FDA97F /* CalendarExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B49CDFDAF068753D6C4ACE7 /* CalendarExporter.swift */; };
@@ -75,6 +76,7 @@
 		233AD99689C3C08AD818BE8B /* ReEntryFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatterTests.swift; sourceTree = "<group>"; };
 		2C64222180623CB93D2F2E4C /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		2C714D49032B3F7F45343426 /* venues_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venues_sample.json; sourceTree = "<group>"; };
+		33E871E9D868D912F933A274 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
 		396B046CB49E09808AEA8AA4 /* FilterPredicateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPredicateTests.swift; sourceTree = "<group>"; };
 		3A3C01E6D93F0B0275A9503A /* MapsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsLauncher.swift; sourceTree = "<group>"; };
 		45F898DC38DF4AB4A45C6E7C /* ConflictDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictDetectorTests.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				0AB89C8CAA3BA32F28827BF9 /* PlayedTab.swift */,
 				A46D9E18AD0DC5448AE3F908 /* RootTabs.swift */,
 				4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */,
+				33E871E9D868D912F933A274 /* SettingsSheet.swift */,
 				80554B8509EFFA77E8DFBE01 /* Components */,
 			);
 			path = Views;
@@ -434,6 +437,7 @@
 				00883FB9406B3EC3F6AF6BA0 /* ReEntryFormatter.swift in Sources */,
 				8C6DF012080603DB7F0320B8 /* RootTabs.swift in Sources */,
 				28A5C8B0D81B387BF7FB94DC /* ScheduleTab.swift in Sources */,
+				AA0E2CADCDE6AEC68265EDE9 /* SettingsSheet.swift in Sources */,
 				A32E573CE4142B8A1E7CEA66 /* Theme.swift in Sources */,
 				F5C9F1C35F1667E07A5FF6C1 /* Tournament.swift in Sources */,
 				3FBF06BCC2D17E94CB20329F /* VegasPokerGuideApp.swift in Sources */,

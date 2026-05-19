@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ScheduleTab: View {
     @Environment(AppState.self) private var state
+    @State private var showingSettings = false
     @State private var showingFilters = false
     @State private var selected: Tournament? = nil
 
@@ -30,11 +31,19 @@ struct ScheduleTab: View {
             .refreshable { await state.refresh() }
             .navigationTitle("Schedule")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { showingSettings = true } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { showingFilters = true } label: {
                         Label("Filters (\(state.filters.activeCount))", systemImage: "line.3.horizontal.decrease.circle")
                     }
                 }
+            }
+            .sheet(isPresented: $showingSettings) {
+                SettingsSheet().environment(state)
             }
             .sheet(isPresented: $showingFilters) {
                 FiltersSheet().environment(state)
