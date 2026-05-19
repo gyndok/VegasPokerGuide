@@ -1,0 +1,79 @@
+- slug: wsop-paris
+  display_name: WSOP Paris / Horseshoe
+  series_name: World Series of Poker
+  series_dates: "2026-05-26 to 2026-07-15"
+  address: "3655 S Las Vegas Blvd, Las Vegas, NV 89109"
+  website: "https://www.wsop.com/"
+  structure_pdf_url: "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf"
+  color_hex: "#C8102E"
+  match_terms: ["WSOP", "Paris", "Horseshoe"]
+
+- slug: wynn
+  display_name: Wynn
+  series_name: Wynn Summer Classic
+  series_dates: "2026-05-20 to 2026-07-13"
+  address: "3131 S Las Vegas Blvd, Las Vegas, NV 89109"
+  website: "https://wynnlasvegas.com/casino/poker"
+  structure_pdf_url: "https://cdn.wynnresorts.com/image/upload/v1752010416/visitwynn_pdfs_files/Poker/Wynn%20Summer%20Classic/Wynn_Summer_Classic-Structures.pdf"
+  color_hex: "#B8860B"
+  match_terms: ["Wynn"]
+
+- slug: venetian
+  display_name: Venetian
+  series_name: Venetian DeepStack Championship
+  series_dates: "2026-05-18 to 2026-08-02"
+  address: "3355 S Las Vegas Blvd, Las Vegas, NV 89109"
+  website: "https://www.venetianlasvegas.com/casino/poker.html"
+  structure_pdf_url: "https://www.venetianlasvegas.com/content/dam/vlvweb/casino/poker/deepstack/2026/structures/dscps_2026-structure_21.pdf"
+  color_hex: "#8B0000"
+  match_terms: ["Venetian"]
+
+- slug: aria
+  display_name: Aria / PokerGo
+  series_name: Aria Poker Classic
+  series_dates: "2026-05-27 to 2026-07-12"
+  address: "3730 S Las Vegas Blvd, Las Vegas, NV 89158"
+  website: "https://aria.mgmresorts.com/en/amenities/aria-poker-room.html"
+  structure_pdf_url: ""
+  color_hex: "#1F3A93"
+  match_terms: ["Aria", "PokerGo"]
+
+- slug: mgm-grand
+  display_name: MGM Grand
+  series_name: MGM Grand Summer Series
+  series_dates: "2026-06-03 to 2026-07-10"
+  address: "3799 S Las Vegas Blvd, Las Vegas, NV 89109"
+  website: "https://mgmgrand.mgmresorts.com/"
+  structure_pdf_url: ""
+  color_hex: "#C9A227"
+  match_terms: ["MGM"]
+
+- slug: orleans
+  display_name: Orleans
+  series_name: Orleans Summer Open
+  series_dates: "2026-05-22 to 2026-07-12"
+  address: "4500 W Tropicana Ave, Las Vegas, NV 89103"
+  website: "https://www.orleanscasino.com/"
+  structure_pdf_url: "https://mc-d7f7cc1f-1a7c-4fc5-b531-6087-cdn-endpoint.azureedge.net/-/media/project/boyd/property/lasvegas/orleans/pdf/2026_oso_flyer_and_structures.pdf"
+  color_hex: "#0066A2"
+  match_terms: ["Orleans"]
+
+- slug: south-point
+  display_name: South Point
+  series_name: South Point Summer Poker Series
+  series_dates: "2026-05-25 to 2026-07-12"
+  address: "9777 S Las Vegas Blvd, Las Vegas, NV 89183"
+  website: "https://southpointcasino.com/casino/poker-room/summer-events-may-26-july-12"
+  structure_pdf_url: ""
+  color_hex: "#006747"
+  match_terms: ["South Point", "Southpoint"]
+
+- slug: golden-nugget
+  display_name: Golden Nugget
+  series_name: Golden Nugget Summer
+  series_dates: "2026-06-03 to 2026-06-28"
+  address: "129 E Fremont St, Las Vegas, NV 89101"
+  website: "https://www.goldennugget.com/las-vegas/casino/poker/"
+  structure_pdf_url: ""
+  color_hex: "#FFB300"
+  match_terms: ["Golden Nugget", "Nugget"]
