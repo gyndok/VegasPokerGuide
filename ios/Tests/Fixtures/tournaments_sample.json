@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-05-19T14:32:00Z",
+  "source_sheet_updated_at": "2026-05-19T08:55:00Z",
+  "tournaments": [
+    {
+      "id": "venetian-2026-05-19-nlh-1b",
+      "venue": "venetian",
+      "date_pt": "2026-05-19",
+      "start_at_pt": "2026-05-19T11:10:00-07:00",
+      "late_reg_close_at_pt": "2026-05-19T17:55:00-07:00",
+      "game": "NLH",
+      "game_category": "nlh",
+      "event_name": "NLH 1B",
+      "buy_in_usd": 600,
+      "guarantee_usd": 150000,
+      "re_entry": { "type": "unlimited", "count": null, "raw": "UL" },
+      "is_day2": false,
+      "flight_group": "NLH",
+      "notes": null
+    },
+    {
+      "id": "wynn-2026-05-21-nlh-day-2",
+      "venue": "wynn",
+      "date_pt": "2026-05-21",
+      "start_at_pt": null,
+      "late_reg_close_at_pt": null,
+      "game": "NLH",
+      "game_category": "nlh",
+      "event_name": "NLH Day 2",
+      "buy_in_usd": null,
+      "guarantee_usd": null,
+      "re_entry": { "type": "unknown", "count": null, "raw": "" },
+      "is_day2": true,
+      "flight_group": "NLH",
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "venues": [
+    {
+      "slug": "venetian",
+      "display_name": "Venetian",
+      "series_name": "Venetian DeepStack Championship",
+      "series_dates": "2026-05-18 to 2026-08-02",
+      "address": "3355 S Las Vegas Blvd, Las Vegas, NV 89109",
+      "maps_url": "https://maps.apple.com/?address=3355+S+Las+Vegas+Blvd",
+      "website": "https://www.venetianlasvegas.com/casino/poker.html",
+      "structure_pdf_url": "https://example.com/structure.pdf",
+      "color_hex": "#8B0000"
+    }
+  ]
+}
