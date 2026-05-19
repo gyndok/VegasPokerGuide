@@ -1,0 +1,78 @@
+name: VegasPokerGuide
+options:
+  bundleIdPrefix: com.gyndok
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    DEVELOPMENT_TEAM: ""  # set to your personal team ID
+    CODE_SIGN_STYLE: Automatic
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+targets:
+  VegasPokerGuide:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    resources:
+      - path: Sources/Resources/Assets.xcassets
+      - path: Sources/Resources/tournaments_seed.json
+      - path: Sources/Resources/venues_seed.json
+    info:
+      path: Sources/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: Vegas Poker
+        UILaunchScreen:
+          UIColorName: ""
+        NSCalendarsUsageDescription: "Vegas Poker uses Calendar to add tournaments you star to your schedule."
+        NSUserNotificationUsageDescription: "Vegas Poker schedules local reminders before late registration closes for events you star."
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: "1"
+        PRODUCT_BUNDLE_IDENTIFIER: com.gyndok.VegasPokerGuide
+    preBuildScripts:
+      - name: "Regenerate Xcode project from project.yml when out of sync"
+        basedOnDependencyAnalysis: false
+        script: |
+          set -e
+          cd "${SRCROOT}"
+          PBXPROJ="${SRCROOT}/VegasPokerGuide.xcodeproj/project.pbxproj"
+          NEEDS_REGEN=0
+          if [ ! -f "$PBXPROJ" ] || [ "project.yml" -nt "$PBXPROJ" ]; then
+            NEEDS_REGEN=1
+          elif find Sources Tests -type d -newer "$PBXPROJ" -print -quit 2>/dev/null | grep -q .; then
+            NEEDS_REGEN=1
+          fi
+          if [ "$NEEDS_REGEN" = "0" ]; then exit 0; fi
+          if command -v xcodegen >/dev/null 2>&1; then XCODEGEN=xcodegen
+          elif [ -x /opt/homebrew/bin/xcodegen ]; then XCODEGEN=/opt/homebrew/bin/xcodegen
+          elif [ -x /usr/local/bin/xcodegen ]; then XCODEGEN=/usr/local/bin/xcodegen
+          else echo "warning: install xcodegen via 'brew install xcodegen'"; exit 0; fi
+          "$XCODEGEN" generate
+          echo "warning: Regenerated VegasPokerGuide.xcodeproj — close and reopen if files appear missing."
+  VegasPokerGuideTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    resources:
+      - path: Tests/Fixtures
+    dependencies:
+      - target: VegasPokerGuide
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gyndok.VegasPokerGuideTests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  VegasPokerGuide:
+    build:
+      targets:
+        VegasPokerGuide: all
+        VegasPokerGuideTests: [test]
+    test:
+      targets:
+        - VegasPokerGuideTests

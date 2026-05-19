@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BE7777583D5AD349F81FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E390ACDBF56732C2089CCCE /* Assets.xcassets */; };
+		1819556B9DDBBE380A940A1A /* tournaments_seed.json in Resources */ = {isa = PBXBuildFile; fileRef = BDCC072E3C8569F2919E57BC /* tournaments_seed.json */; };
+		3FBF06BCC2D17E94CB20329F /* VegasPokerGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */; };
+		DB8CE8D7B57C5F00EEA97129 /* venues_seed.json in Resources */ = {isa = PBXBuildFile; fileRef = F3763548ECCCD6932725B5DE /* venues_seed.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9183D3D9F458FD242FFE522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5E882CC9BBCF77355509C06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7880BF4FB2BC0CC157EABE76;
+			remoteInfo = VegasPokerGuide;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0201BA7B023B691AB3635CB4 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		1E390ACDBF56732C2089CCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94100DD8A5601957AA20FFBD /* VegasPokerGuideTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VegasPokerGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A915DECEA1B9512AB66FDAD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BDCC072E3C8569F2919E57BC /* tournaments_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tournaments_seed.json; sourceTree = "<group>"; };
+		D9307B6A8C243954E599411D /* VegasPokerGuide.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VegasPokerGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegasPokerGuideApp.swift; sourceTree = "<group>"; };
+		F3763548ECCCD6932725B5DE /* venues_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venues_seed.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0344711E01FDA829B77FD92D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24EA179EF9F38BB12B278319 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B9CBF7A1CD07740526A1F7BA /* App */,
+				39E9890FF10B085B01A579A8 /* Resources */,
+				0344711E01FDA829B77FD92D /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		39E9890FF10B085B01A579A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E390ACDBF56732C2089CCCE /* Assets.xcassets */,
+				A915DECEA1B9512AB66FDAD8 /* Info.plist */,
+				BDCC072E3C8569F2919E57BC /* tournaments_seed.json */,
+				F3763548ECCCD6932725B5DE /* venues_seed.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		905356BE3DB88D67CE9AD6E3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C74B6CBA677789A47F22466C /* Fixtures */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B9CBF7A1CD07740526A1F7BA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C74B6CBA677789A47F22466C /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				0201BA7B023B691AB3635CB4 /* .gitkeep */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		EBC2E646568CD37955D21908 = {
+			isa = PBXGroup;
+			children = (
+				24EA179EF9F38BB12B278319 /* Sources */,
+				905356BE3DB88D67CE9AD6E3 /* Tests */,
+				F2FB69442B3190CE11B0628F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2FB69442B3190CE11B0628F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9307B6A8C243954E599411D /* VegasPokerGuide.app */,
+				94100DD8A5601957AA20FFBD /* VegasPokerGuideTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		079B169E58B672DE735C8F35 /* VegasPokerGuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 423F3ADFEAD6537E97D5935C /* Build configuration list for PBXNativeTarget "VegasPokerGuideTests" */;
+			buildPhases = (
+				98507A976C227D289EF66D5A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA105D3825B74D97F52B9C21 /* PBXTargetDependency */,
+			);
+			name = VegasPokerGuideTests;
+			packageProductDependencies = (
+			);
+			productName = VegasPokerGuideTests;
+			productReference = 94100DD8A5601957AA20FFBD /* VegasPokerGuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7880BF4FB2BC0CC157EABE76 /* VegasPokerGuide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 395A4177768EDC45959D8A54 /* Build configuration list for PBXNativeTarget "VegasPokerGuide" */;
+			buildPhases = (
+				3C7E4FE4CD0C9DDCFB816589 /* Regenerate Xcode project from project.yml when out of sync */,
+				F8F2E265FCA6112EDE534EB7 /* Sources */,
+				C3806F9F5DB4CFE377BA5AB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VegasPokerGuide;
+			packageProductDependencies = (
+			);
+			productName = VegasPokerGuide;
+			productReference = D9307B6A8C243954E599411D /* VegasPokerGuide.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5E882CC9BBCF77355509C06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					079B169E58B672DE735C8F35 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					7880BF4FB2BC0CC157EABE76 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A891ADDBD77AA296BF4319A4 /* Build configuration list for PBXProject "VegasPokerGuide" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EBC2E646568CD37955D21908;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7880BF4FB2BC0CC157EABE76 /* VegasPokerGuide */,
+				079B169E58B672DE735C8F35 /* VegasPokerGuideTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3806F9F5DB4CFE377BA5AB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BE7777583D5AD349F81FF7 /* Assets.xcassets in Resources */,
+				1819556B9DDBBE380A940A1A /* tournaments_seed.json in Resources */,
+				DB8CE8D7B57C5F00EEA97129 /* venues_seed.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C7E4FE4CD0C9DDCFB816589 /* Regenerate Xcode project from project.yml when out of sync */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Regenerate Xcode project from project.yml when out of sync";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\ncd \"${SRCROOT}\"\nPBXPROJ=\"${SRCROOT}/VegasPokerGuide.xcodeproj/project.pbxproj\"\nNEEDS_REGEN=0\nif [ ! -f \"$PBXPROJ\" ] || [ \"project.yml\" -nt \"$PBXPROJ\" ]; then\n  NEEDS_REGEN=1\nelif find Sources Tests -type d -newer \"$PBXPROJ\" -print -quit 2>/dev/null | grep -q .; then\n  NEEDS_REGEN=1\nfi\nif [ \"$NEEDS_REGEN\" = \"0\" ]; then exit 0; fi\nif command -v xcodegen >/dev/null 2>&1; then XCODEGEN=xcodegen\nelif [ -x /opt/homebrew/bin/xcodegen ]; then XCODEGEN=/opt/homebrew/bin/xcodegen\nelif [ -x /usr/local/bin/xcodegen ]; then XCODEGEN=/usr/local/bin/xcodegen\nelse echo \"warning: install xcodegen via 'brew install xcodegen'\"; exit 0; fi\n\"$XCODEGEN\" generate\necho \"warning: Regenerated VegasPokerGuide.xcodeproj — close and reopen if files appear missing.\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98507A976C227D289EF66D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F2E265FCA6112EDE534EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FBF06BCC2D17E94CB20329F /* VegasPokerGuideApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA105D3825B74D97F52B9C21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7880BF4FB2BC0CC157EABE76 /* VegasPokerGuide */;
+			targetProxy = C9183D3D9F458FD242FFE522 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05D2EDF86FCBB7B5B9C6872F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gyndok.VegasPokerGuide;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3B262D06E28270559073EC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		46080BE468B6C9E8EDE5615E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gyndok.VegasPokerGuideTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VegasPokerGuide.app/VegasPokerGuide";
+			};
+			name = Release;
+		};
+		4742869D111D3FF8F6011F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		8F79D18C6A8464FD01732069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gyndok.VegasPokerGuideTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VegasPokerGuide.app/VegasPokerGuide";
+			};
+			name = Debug;
+		};
+		DBCE01119EE606E2EC4AE446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gyndok.VegasPokerGuide;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		395A4177768EDC45959D8A54 /* Build configuration list for PBXNativeTarget "VegasPokerGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D2EDF86FCBB7B5B9C6872F /* Debug */,
+				DBCE01119EE606E2EC4AE446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		423F3ADFEAD6537E97D5935C /* Build configuration list for PBXNativeTarget "VegasPokerGuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F79D18C6A8464FD01732069 /* Debug */,
+				46080BE468B6C9E8EDE5615E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A891ADDBD77AA296BF4319A4 /* Build configuration list for PBXProject "VegasPokerGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B262D06E28270559073EC1D /* Debug */,
+				4742869D111D3FF8F6011F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5E882CC9BBCF77355509C06 /* Project object */;
+}
