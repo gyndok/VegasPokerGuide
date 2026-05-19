@@ -26,8 +26,11 @@
 		B728686F14433DBD74580ACD /* ReEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE26825E50AC120BC2573B /* ReEntry.swift */; };
 		DB8CE8D7B57C5F00EEA97129 /* venues_seed.json in Resources */ = {isa = PBXBuildFile; fileRef = F3763548ECCCD6932725B5DE /* venues_seed.json */; };
 		DE076B3116D623998A66583E /* GameCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2A460C058E6DCC76B1190 /* GameCategory.swift */; };
+		E74C89736DA841E1B64BF880 /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB252C023E7C9381AED56EEC /* FeedCache.swift */; };
 		E906CC7332DF888B73AFADCE /* tournaments_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD59B1D00B17AF3C457B76 /* tournaments_sample.json */; };
 		E9EF729613E8337F39CE3F31 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2B0631573ED8F3AE740B2 /* Venue.swift */; };
+		EB35CA7B4CD6AA1B243DA181 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A3C1DFF2ED31E56707EB1 /* Config.swift */; };
+		F5C01AAB4B4C2228698D3773 /* FeedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C59425EB78D5C34CF7C87C /* FeedClient.swift */; };
 		F5C9F1C35F1667E07A5FF6C1 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C64222180623CB93D2F2E4C /* Tournament.swift */; };
 		FAEF8EB1C4A6E8BF25ADC050 /* ConflictDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1D9AD2252C3509F56F5F9 /* ConflictDetector.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0201BA7B023B691AB3635CB4 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		08B2B0631573ED8F3AE740B2 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		08C59425EB78D5C34CF7C87C /* FeedClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClient.swift; sourceTree = "<group>"; };
 		1E390ACDBF56732C2089CCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		233AD99689C3C08AD818BE8B /* ReEntryFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatterTests.swift; sourceTree = "<group>"; };
 		2C64222180623CB93D2F2E4C /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
@@ -56,9 +60,11 @@
 		713ED26C7D061852142D83A3 /* FeedDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDocuments.swift; sourceTree = "<group>"; };
 		77D1D9AD2252C3509F56F5F9 /* ConflictDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConflictDetector.swift; sourceTree = "<group>"; };
 		7BAD59B1D00B17AF3C457B76 /* tournaments_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tournaments_sample.json; sourceTree = "<group>"; };
+		885A3C1DFF2ED31E56707EB1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		94100DD8A5601957AA20FFBD /* VegasPokerGuideTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VegasPokerGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		967025B276D3EF9211DAA64C /* FeedDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDecodingTests.swift; sourceTree = "<group>"; };
 		A915DECEA1B9512AB66FDAD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB252C023E7C9381AED56EEC /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatter.swift; sourceTree = "<group>"; };
 		BDCC072E3C8569F2919E57BC /* tournaments_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tournaments_seed.json; sourceTree = "<group>"; };
 		C3F58F6D888EC1FD44FA4FC2 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				C3F58F6D888EC1FD44FA4FC2 /* FavoritesStore.swift */,
+				AB252C023E7C9381AED56EEC /* FeedCache.swift */,
+				08C59425EB78D5C34CF7C87C /* FeedClient.swift */,
 				F359106E6F79F2E4736A8B11 /* FeedDecoder.swift */,
 			);
 			path = Services;
@@ -141,6 +149,7 @@
 		B9CBF7A1CD07740526A1F7BA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				885A3C1DFF2ED31E56707EB1 /* Config.swift */,
 				DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */,
 			);
 			path = App;
@@ -328,9 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB35CA7B4CD6AA1B243DA181 /* Config.swift in Sources */,
 				FAEF8EB1C4A6E8BF25ADC050 /* ConflictDetector.swift in Sources */,
 				8FB8AA94C3C3BACAF876E44E /* CountdownState.swift in Sources */,
 				0C90E058C33C7EF43BA5B627 /* FavoritesStore.swift in Sources */,
+				E74C89736DA841E1B64BF880 /* FeedCache.swift in Sources */,
+				F5C01AAB4B4C2228698D3773 /* FeedClient.swift in Sources */,
 				B246FAFD6C79868415FB375E /* FeedDecoder.swift in Sources */,
 				172ED31F55BDF4CA534CFED0 /* FeedDocuments.swift in Sources */,
 				511CBF0EBA652AAEA2B3D0D7 /* FilterPredicate.swift in Sources */,
