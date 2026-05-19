@@ -18,6 +18,7 @@
 		28A5C8B0D81B387BF7FB94DC /* ScheduleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */; };
 		2A44D6D6F439DD9AC0A6E061 /* GameCategoryStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827494EA765301AA54437E1 /* GameCategoryStyle.swift */; };
 		2D0CA465517BFD247F2877EA /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25B8CCCA65E5A517352BEEF /* EventDetail.swift */; };
+		37254C180055D5FB9E4A3A41 /* MyScheduleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1A50AEF7B7A8916E9ACD6 /* MyScheduleTab.swift */; };
 		3FBF06BCC2D17E94CB20329F /* VegasPokerGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AF11F0F0B61B202A985C6 /* VegasPokerGuideApp.swift */; };
 		4E9A369FF86E764D70AB6EEF /* CountdownStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EAEFD962C35B7E01C29438 /* CountdownStateTests.swift */; };
 		511CBF0EBA652AAEA2B3D0D7 /* FilterPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF56CCBBCD8A3AA7F8DD472 /* FilterPredicate.swift */; };
@@ -106,6 +107,7 @@
 		EC79E122638CF34C56BC54D6 /* DayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHeader.swift; sourceTree = "<group>"; };
 		F359106E6F79F2E4736A8B11 /* FeedDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDecoder.swift; sourceTree = "<group>"; };
 		F3763548ECCCD6932725B5DE /* venues_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venues_seed.json; sourceTree = "<group>"; };
+		F5C1A50AEF7B7A8916E9ACD6 /* MyScheduleTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleTab.swift; sourceTree = "<group>"; };
 		F800B57BB325DD96B1328839 /* CountdownState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownState.swift; sourceTree = "<group>"; };
 		F8FE26825E50AC120BC2573B /* ReEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			children = (
 				C25B8CCCA65E5A517352BEEF /* EventDetail.swift */,
 				6597D2417ADA335B83746B62 /* FiltersSheet.swift */,
+				F5C1A50AEF7B7A8916E9ACD6 /* MyScheduleTab.swift */,
 				A46D9E18AD0DC5448AE3F908 /* RootTabs.swift */,
 				4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */,
 				80554B8509EFFA77E8DFBE01 /* Components */,
@@ -421,6 +424,7 @@
 				F078C2AE87C4B502E080FD88 /* GameCategoryChip.swift in Sources */,
 				2A44D6D6F439DD9AC0A6E061 /* GameCategoryStyle.swift in Sources */,
 				9AAD7C26E2B1D07176CA5460 /* MapsLauncher.swift in Sources */,
+				37254C180055D5FB9E4A3A41 /* MyScheduleTab.swift in Sources */,
 				18D084C8B24F6C7B4F45E43B /* NotificationScheduler.swift in Sources */,
 				B728686F14433DBD74580ACD /* ReEntry.swift in Sources */,
 				00883FB9406B3EC3F6AF6BA0 /* ReEntryFormatter.swift in Sources */,

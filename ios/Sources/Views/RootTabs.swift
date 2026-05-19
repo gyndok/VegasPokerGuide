@@ -14,5 +14,4 @@ struct RootTabs: View {
 }
 
 // Placeholders — replaced by real views in later tasks.
-struct MyScheduleTab: View { var body: some View { Text("My Schedule (stub)") } }
 struct PlayedTab: View { var body: some View { Text("Played (stub)") } }
