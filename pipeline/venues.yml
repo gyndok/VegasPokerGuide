@@ -4,7 +4,13 @@
   series_dates: "2026-05-26 to 2026-07-15"
   address: "3655 S Las Vegas Blvd, Las Vegas, NV 89109"
   website: "https://www.wsop.com/"
-  structure_pdf_url: "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf"
+  # SpaceyFCB's sheet links EVERY WSOP cell to the same Event #1 (Mini Mystery
+  # Millions) PDF — which is wrong for every other WSOP event. WSOP's own site
+  # only publishes "All-In-One" bundles, not per-event structure PDFs. Override
+  # the sheet's per-event hyperlinks for WSOP and use the Bracelet All-In-One,
+  # which contains the structures for every bracelet event in the series.
+  override_per_event_url: true
+  structure_pdf_url: "https://assets.wsopcdn.com/wsop/30f480dc-0ddb-4807-a4a4-8792b75e13fb.pdf"
   color_hex: "#C8102E"
   match_terms: ["WSOP", "Paris", "Horseshoe"]
 

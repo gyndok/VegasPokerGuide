@@ -50,12 +50,17 @@ def build_feed(xlsx_path: Path, venues_yml: Path, out_dir: Path) -> None:
             continue
         event_links_by_slug[(slug, day, ev_name.strip())] = url
 
+    # Some venues (notably WSOP) link every cell to a single wrong PDF in the
+    # source sheet. venues.yml can set override_per_event_url=true to skip the
+    # per-event join and fall back to the venue-level structure_pdf_url.
+    override_slugs = {v["slug"] for v in venues if v.get("override_per_event_url")}
+
     # Attach per-event PDF URL to each tournament via the slug-keyed lookup.
     enriched: list[Tournament] = []
     for t in tournaments:
         slug = venue_slug_lookup.get(t.venue_display)
         url: str | None = None
-        if slug:
+        if slug and slug not in override_slugs:
             url = event_links_by_slug.get((slug, t.date_pt, t.event_name.strip()))
         if url is not None:
             enriched.append(dataclasses.replace(t, structure_pdf_url=url))

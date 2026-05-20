@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T19:31:13Z",
+  "generated_at": "2026-05-20T19:40:44Z",
   "source_sheet_updated_at": "2026-05-19T19:07:05Z",
   "tournaments": [
     {
@@ -1196,7 +1196,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -1259,7 +1259,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH 8-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -1427,7 +1427,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -1553,7 +1553,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Industry Employees",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -1595,7 +1595,7 @@
       },
       "is_day2": false,
       "flight_group": "O/8",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -1742,7 +1742,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -1889,7 +1889,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -1952,7 +1952,7 @@
       },
       "is_day2": false,
       "flight_group": "7-Card Stud",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2120,7 +2120,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2246,7 +2246,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Heads-Up",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2309,7 +2309,7 @@
       },
       "is_day2": false,
       "flight_group": "Badugi",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2498,7 +2498,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2645,7 +2645,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Heads-Up",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2687,7 +2687,7 @@
       },
       "is_day2": false,
       "flight_group": "O/8 Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2771,7 +2771,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -2897,7 +2897,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Deepstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3023,7 +3023,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3086,7 +3086,7 @@
       },
       "is_day2": false,
       "flight_group": "2-7 NL",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3254,7 +3254,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH 6-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3380,7 +3380,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3422,7 +3422,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO/8 - O/8 - Big O",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3632,7 +3632,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Deepstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3737,7 +3737,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Circuit Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3800,7 +3800,7 @@
       },
       "is_day2": false,
       "flight_group": "2-7 NL Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -3989,7 +3989,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -4157,7 +4157,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -4220,7 +4220,7 @@
       },
       "is_day2": false,
       "flight_group": "Dealers Choice",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -4409,7 +4409,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -4556,7 +4556,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -4619,7 +4619,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -4661,7 +4661,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO/8",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -4892,7 +4892,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5039,7 +5039,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5102,7 +5102,7 @@
       },
       "is_day2": false,
       "flight_group": "Big O",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5144,7 +5144,7 @@
       },
       "is_day2": false,
       "flight_group": "7-Card Stud Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5375,7 +5375,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5522,7 +5522,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5585,7 +5585,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller 6-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5627,7 +5627,7 @@
       },
       "is_day2": false,
       "flight_group": "Big O",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -5879,7 +5879,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -6026,7 +6026,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Monsterstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -6068,7 +6068,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -6152,7 +6152,7 @@
       },
       "is_day2": false,
       "flight_group": "Dealers Choice Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -6404,7 +6404,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH - PLO Deepstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -6593,7 +6593,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -6635,7 +6635,7 @@
       },
       "is_day2": false,
       "flight_group": "FLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -6908,7 +6908,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Turbo Bounty ($500)",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7034,7 +7034,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7118,7 +7118,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO/8 Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7349,7 +7349,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Colossus",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7496,7 +7496,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7538,7 +7538,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7559,7 +7559,7 @@
       },
       "is_day2": false,
       "flight_group": "HORSE",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7790,7 +7790,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Colossus",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -7979,7 +7979,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -8021,7 +8021,7 @@
       },
       "is_day2": false,
       "flight_group": "FLH Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -8315,7 +8315,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Colossus",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -8483,7 +8483,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Seniors Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -8546,7 +8546,7 @@
       },
       "is_day2": false,
       "flight_group": "Razz",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -8861,7 +8861,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Colossus",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -9029,7 +9029,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Super Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -9092,7 +9092,7 @@
       },
       "is_day2": false,
       "flight_group": "Big O Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -9386,7 +9386,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Deepstack 8-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -9512,7 +9512,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Turbo Bounty ($3k)",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -9596,7 +9596,7 @@
       },
       "is_day2": false,
       "flight_group": "O/8 - Stud/8",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -9806,7 +9806,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Seniors",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -9974,7 +9974,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -10016,7 +10016,7 @@
       },
       "is_day2": false,
       "flight_group": "Razz Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -10247,7 +10247,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Seniors",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -10457,7 +10457,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -10562,7 +10562,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -10814,7 +10814,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Millionaire Maker",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -11003,7 +11003,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mystery Bounty",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -11066,7 +11066,7 @@
       },
       "is_day2": false,
       "flight_group": "9-Game Mix",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -11318,7 +11318,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Millionaire Maker",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -11507,7 +11507,7 @@
       },
       "is_day2": false,
       "flight_group": "5-Card PLO",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -11549,7 +11549,7 @@
       },
       "is_day2": false,
       "flight_group": "HORSE Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -11801,7 +11801,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Millionaire Maker",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -11969,7 +11969,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -12095,7 +12095,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH 6-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -12305,7 +12305,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Millionaire Maker",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -12473,7 +12473,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -12557,7 +12557,7 @@
       },
       "is_day2": false,
       "flight_group": "2-7 Triple Draw",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -12851,7 +12851,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Salute To Warriors",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -13019,7 +13019,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -13103,7 +13103,7 @@
       },
       "is_day2": false,
       "flight_group": "Poker Players Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -13334,7 +13334,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Super Seniors",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -13502,7 +13502,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -13586,7 +13586,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -13817,7 +13817,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -13964,7 +13964,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO - NLH High Roller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -14111,7 +14111,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -14300,7 +14300,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -14510,7 +14510,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Tag Team",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -14594,7 +14594,7 @@
       },
       "is_day2": false,
       "flight_group": "2-7 Triple Draw Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -14783,7 +14783,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -14972,7 +14972,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Ladies Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -15035,7 +15035,7 @@
       },
       "is_day2": false,
       "flight_group": "Stud/8",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -15287,7 +15287,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -15518,7 +15518,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -15770,7 +15770,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -15980,7 +15980,7 @@
       },
       "is_day2": false,
       "flight_group": "Mixed Big Bet",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -16106,7 +16106,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mystery Millions",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -16253,7 +16253,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Main",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -16400,7 +16400,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH 6-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -16484,7 +16484,7 @@
       },
       "is_day2": false,
       "flight_group": "8-Game",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -16757,7 +16757,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Main",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -16946,7 +16946,7 @@
       },
       "is_day2": false,
       "flight_group": "Stud/8 Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -17219,7 +17219,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Mini Main",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -17345,7 +17345,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -17429,7 +17429,7 @@
       },
       "is_day2": false,
       "flight_group": "Mixed Triple Draw Lowball",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -17660,7 +17660,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Deepstack Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -17786,7 +17786,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -17849,7 +17849,7 @@
       },
       "is_day2": false,
       "flight_group": "8-Game Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18059,7 +18059,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Summer Celebration",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18164,7 +18164,7 @@
       },
       "is_day2": false,
       "flight_group": "Main Event",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18248,7 +18248,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Double Board Bomb Pot",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18395,7 +18395,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Summer Celebration",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18500,7 +18500,7 @@
       },
       "is_day2": false,
       "flight_group": "Main Event",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18563,7 +18563,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Turbo Bounty ($1k5)",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18773,7 +18773,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -18899,7 +18899,7 @@
       },
       "is_day2": false,
       "flight_group": "Main Event",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -19151,7 +19151,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Ultra Stack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -19214,7 +19214,7 @@
       },
       "is_day2": false,
       "flight_group": "Main Event",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -19466,7 +19466,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Ultra Stack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -19592,7 +19592,7 @@
       },
       "is_day2": false,
       "flight_group": "Main 2ABC",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -19928,7 +19928,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Ultra Stack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20012,7 +20012,7 @@
       },
       "is_day2": false,
       "flight_group": "Main",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20117,7 +20117,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Mystery Bounty",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20348,7 +20348,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Gladiators",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20516,7 +20516,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Midstakes Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20558,7 +20558,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Mystery Bounty",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20747,7 +20747,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Gladiators",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20894,7 +20894,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Midstakes Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20936,7 +20936,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Highroller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -20957,7 +20957,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO Dealers Choice",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21125,7 +21125,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Gladiators",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21251,7 +21251,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Midstakes Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21293,7 +21293,7 @@
       },
       "is_day2": false,
       "flight_group": "TORSE",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21440,7 +21440,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Gladiators",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21545,7 +21545,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Closer",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21587,7 +21587,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH 6-max Championship",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21776,7 +21776,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Summer Saver",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21881,7 +21881,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Closer",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -21923,7 +21923,7 @@
       },
       "is_day2": false,
       "flight_group": "PLO 6-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -22070,7 +22070,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Summer Saver",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -22133,7 +22133,7 @@
       },
       "is_day2": false,
       "flight_group": "HORSE High Roller",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -22196,7 +22196,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH Deepstack",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -22238,7 +22238,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH 8-max",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
@@ -22301,7 +22301,7 @@
       },
       "is_day2": false,
       "flight_group": "NLH",
-      "structure_pdf_url": "https://wsop.gg-global-cdn.com/wsop/54958bb0-7e23-4689-84e3-3cfbbd7c261b.pdf",
+      "structure_pdf_url": null,
       "notes": null
     },
     {
