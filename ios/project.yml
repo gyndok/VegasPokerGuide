@@ -9,8 +9,8 @@ settings:
     SWIFT_VERSION: "5.10"
     DEVELOPMENT_TEAM: ""  # set to your personal team ID
     CODE_SIGN_STYLE: Automatic
-    MARKETING_VERSION: "0.1.0"
-    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "1.2"
+    CURRENT_PROJECT_VERSION: "3"
     SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
 targets:
   VegasPokerGuide:
@@ -27,6 +27,12 @@ targets:
       path: Sources/Resources/Info.plist
       properties:
         CFBundleDisplayName: Kenny's List
+        # Plumb version/build from the build settings above so Xcode UI edits OR
+        # project.yml bumps both work. The literal "1.0"/"1" defaults that xcodegen
+        # otherwise writes are what caused old archives to show "1.0 (1)" no matter
+        # what was set in the General tab.
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         UILaunchScreen:
           UIColorName: ""
         NSCalendarsUsageDescription: "Kenny's List uses Calendar to add tournaments you star to your schedule."
