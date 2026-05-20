@@ -22,6 +22,7 @@ targets:
       - path: Sources/Resources/Assets.xcassets
       - path: Sources/Resources/tournaments_seed.json
       - path: Sources/Resources/venues_seed.json
+      - path: Sources/Resources/Fonts
     info:
       path: Sources/Resources/Info.plist
       properties:
@@ -29,6 +30,11 @@ targets:
         UILaunchScreen:
           UIColorName: ""
         NSCalendarsUsageDescription: "Vegas Poker uses Calendar to add tournaments you star to your schedule."
+        UIAppFonts:
+          - Fraunces.ttf
+          - InterVariable.ttf
+          - InterVariable-Italic.ttf
+          - JetBrainsMono.ttf
     settings:
       base:
         TARGETED_DEVICE_FAMILY: "1"

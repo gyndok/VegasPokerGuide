@@ -22,7 +22,14 @@
 	<string>1</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Vegas Poker uses Calendar to add tournaments you star to your schedule.</string>
-<key>UILaunchScreen</key>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fraunces.ttf</string>
+		<string>InterVariable.ttf</string>
+		<string>InterVariable-Italic.ttf</string>
+		<string>JetBrainsMono.ttf</string>
+	</array>
+	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
 		<string></string>
