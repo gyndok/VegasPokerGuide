@@ -12,6 +12,12 @@ final class AppState {
     var filters = FilterPredicate()
     var parseWarningCount: Int = 0
 
+    /// Observable mirror of FavoritesStore.allStarred. The store is the disk source of truth;
+    /// these mirrors exist so the SwiftUI Observation framework can track mutations and re-render.
+    var starredIDs: Set<String> = []
+    var notesByID: [String: String] = [:]
+    var playedByID: [String: PlayedRecord] = [:]
+
     private let cache: FeedCache
     private let client: FeedClient
     private let store: FavoritesStore
@@ -27,6 +33,12 @@ final class AppState {
         self.store = FavoritesStore(rootDirectory: documentsDirectory.appendingPathComponent("Favorites"))
         self.notifier = notifier
         self.defaultLeadMinutes = defaultLeadMinutes
+        // Hydrate observable mirrors from disk
+        self.starredIDs = store.allStarred
+        self.notesByID = Dictionary(uniqueKeysWithValues: store.allStarred.compactMap { id in
+            store.note(for: id).map { (id, $0) }
+        })
+        self.playedByID = Dictionary(uniqueKeysWithValues: store.playedRecords().map { ($0.id, $0) })
     }
 
     // MARK: - Bootstrap
@@ -103,23 +115,24 @@ final class AppState {
     func venue(slug: String) -> Venue? { venues.first { $0.slug == slug } }
 
     // MARK: - Favorites
-    func isStarred(_ id: String) -> Bool { store.isStarred(id) }
+    func isStarred(_ id: String) -> Bool { starredIDs.contains(id) }
     var starredTournaments: [Tournament] {
-        let ids = store.allStarred
-        return tournaments.filter { ids.contains($0.id) }
+        tournaments.filter { starredIDs.contains($0.id) }
     }
     var conflicts: [(String, String)] { ConflictDetector.findConflicts(in: starredTournaments) }
     var starredTotalBuyIn: Int { starredTournaments.compactMap { $0.buyInUSD }.reduce(0, +) }
 
     func toggleStar(_ t: Tournament) async {
-        if store.isStarred(t.id) {
+        if starredIDs.contains(t.id) {
             store.unstar(t.id)
+            starredIDs.remove(t.id)
             if let nid = store.notificationIdentifier(for: t.id) {
                 notifier.cancel(identifier: nid)
                 store.removeNotification(tournamentId: t.id)
             }
         } else {
             store.star(t.id)
+            starredIDs.insert(t.id)
             if let id = await notifier.schedule(for: t, leadMinutes: defaultLeadMinutes),
                let close = t.lateRegCloseAtPT {
                 store.recordNotification(tournamentId: t.id, identifier: id,
@@ -130,14 +143,28 @@ final class AppState {
     }
 
     // MARK: - Notes
-    func note(for id: String) -> String? { store.note(for: id) }
-    func setNote(_ text: String, for id: String) { store.setNote(text, for: id) }
+    func note(for id: String) -> String? { notesByID[id] }
+    func setNote(_ text: String, for id: String) {
+        store.setNote(text, for: id)
+        if text.isEmpty { notesByID.removeValue(forKey: id) } else { notesByID[id] = text }
+    }
 
     // MARK: - Played
-    func playedRecords() -> [PlayedRecord] { store.playedRecords() }
-    func playedTotals() -> PlayedTotals { store.playedTotals() }
-    func recordPlayed(id: String, buyIn: Int, cashed: Int) { store.recordPlayed(id: id, buyIn: buyIn, cashed: cashed) }
-    func unrecordPlayed(id: String) { store.unrecordPlayed(id: id) }
+    func playedRecords() -> [PlayedRecord] { Array(playedByID.values) }
+    func playedTotals() -> PlayedTotals {
+        let records = playedByID.values
+        let totalIn = records.reduce(0) { $0 + $1.buyIn }
+        let totalCashed = records.reduce(0) { $0 + $1.cashed }
+        return PlayedTotals(count: records.count, totalIn: totalIn, totalCashed: totalCashed)
+    }
+    func recordPlayed(id: String, buyIn: Int, cashed: Int) {
+        store.recordPlayed(id: id, buyIn: buyIn, cashed: cashed)
+        playedByID[id] = PlayedRecord(id: id, buyIn: buyIn, cashed: cashed, recordedAt: Date())
+    }
+    func unrecordPlayed(id: String) {
+        store.unrecordPlayed(id: id)
+        playedByID.removeValue(forKey: id)
+    }
 
     // MARK: - Notification lifecycle on refresh
     /// After a feed refresh, event times may have shifted. Rebuild notifications for every starred event.
