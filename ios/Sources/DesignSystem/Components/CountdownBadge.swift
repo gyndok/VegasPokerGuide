@@ -15,6 +15,7 @@ struct CountdownBadge: View {
                 Text(state.text)
                     .font(AppFont.countdown)
                     .monospacedDigit()
+                    .contentTransition(.numericText(countsDown: true))
                     .foregroundStyle(textColor(for: state.tier))
                     .padding(.horizontal, AppSpacing.s)
                     .padding(.vertical, AppSpacing.xs)
@@ -26,7 +27,9 @@ struct CountdownBadge: View {
                 EmptyView()
             }
         }
-        .onReceive(tick) { now = $0 }
+        .onReceive(tick) { newNow in
+            withAnimation(.easeInOut(duration: 0.12)) { now = newNow }
+        }
         .accessibilityLabel("Late registration \(state.text)")
     }
 

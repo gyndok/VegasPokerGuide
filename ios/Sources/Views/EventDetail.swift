@@ -55,7 +55,9 @@ struct EventDetail: View {
             .background(AppColor.appBackground)
         }
         .background(AppColor.appBackground.ignoresSafeArea())
-        .onReceive(countdownTick) { now = $0 }
+        .onReceive(countdownTick) { newNow in
+            withAnimation(.easeInOut(duration: 0.12)) { now = newNow }
+        }
         .onAppear {
             noteDraft = state.note(for: tournament.id) ?? ""
             if let existing = state.playedRecords().first(where: { $0.id == tournament.id }) {
@@ -136,6 +138,7 @@ struct EventDetail: View {
             Text(liveState.text)
                 .font(AppFont.countdownLarge)
                 .monospacedDigit()
+                .contentTransition(.numericText(countsDown: true))
                 .foregroundStyle(textColor(for: liveState.tier))
         }
         .padding(.vertical, AppSpacing.l)

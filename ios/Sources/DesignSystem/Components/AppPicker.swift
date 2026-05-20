@@ -10,7 +10,7 @@ struct AppPicker<Value: Hashable>: View {
         HStack(spacing: AppSpacing.s) {
             ForEach(options, id: \.0) { (value, label) in
                 Button {
-                    withAnimation(.spring(response: 0.22, dampingFraction: 0.75)) {
+                    withAnimation(.spring(response: 0.28, dampingFraction: 0.6)) {
                         selection = value
                     }
                     AppHaptics.filterApplied()
@@ -32,6 +32,8 @@ struct AppPicker<Value: Hashable>: View {
                                 lineWidth: selection == value ? 0.8 : 0.5
                             )
                         )
+                        .scaleEffect(selection == value ? 1.0 : 0.97)
+                        .animation(.spring(response: 0.28, dampingFraction: 0.55), value: selection == value)
                 }
                 .buttonStyle(.plain)
                 .accessibilityAddTraits(selection == value ? [.isSelected, .isButton] : .isButton)

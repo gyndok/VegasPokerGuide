@@ -5,6 +5,7 @@ struct ScheduleTab: View {
     @State private var showingFilters = false
     @State private var showingSettings = false
     @State private var selected: Tournament? = nil
+    @State private var appeared = false
 
     var body: some View {
         @Bindable var bindable = state
@@ -24,7 +25,7 @@ struct ScheduleTab: View {
                 List {
                     ForEach(grouped(), id: \.0) { day, items in
                         Section {
-                            ForEach(items) { t in
+                            ForEach(Array(items.enumerated()), id: \.element.id) { idx, t in
                                 Button {
                                     selected = t
                                     AppHaptics.eventOpened()
@@ -35,6 +36,7 @@ struct ScheduleTab: View {
                                 }
                                 .buttonStyle(.plain)
                                 .appRowStyle()
+                                .modifier(RowEnterTransition(index: idx, appeared: $appeared))
                             }
                         } header: {
                             AppDayHeader(date: day)
@@ -50,6 +52,14 @@ struct ScheduleTab: View {
                 .scrollContentBackground(.hidden)
                 .background(AppColor.appBackground)
                 .refreshable { await state.refresh() }
+                .tint(AppColor.Foil.bright)
+                .task {
+                    // Trigger the staggered enter once per cold tab open
+                    if !appeared {
+                        try? await Task.sleep(nanoseconds: 50_000_000)  // 50ms after first frame
+                        appeared = true
+                    }
+                }
             }
             .background(AppColor.appBackground.ignoresSafeArea())
             .navigationBarTitleDisplayMode(.inline)

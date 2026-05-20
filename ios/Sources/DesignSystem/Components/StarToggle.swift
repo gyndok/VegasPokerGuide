@@ -1,15 +1,18 @@
 import SwiftUI
 
-/// Replaces the default Image(systemName: "star.fill") with a chip-plaque-inspired toggle.
-/// When on: foil-bright filled plaque with a star inset.
-/// When off: foil-dim outline only.
-/// The action is provided as a closure (binding-style usage is awkward with async toggles).
 struct StarToggle: View {
     let isOn: Bool
     let onTap: () -> Void
 
+    @State private var rotation: Double = 0
+
     var body: some View {
-        Button(action: onTap) {
+        Button {
+            onTap()
+            withAnimation(.easeInOut(duration: 0.32)) {
+                rotation += 180
+            }
+        } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: AppRadius.chipPlaque)
                     .fill(isOn ? AppColor.Foil.bright.opacity(0.95) : Color.clear)
@@ -22,6 +25,7 @@ struct StarToggle: View {
                     .font(.system(size: 11, weight: .bold))
                     .foregroundStyle(isOn ? AppColor.Rail.true : AppColor.Foil.dim)
             }
+            .rotation3DEffect(.degrees(rotation), axis: (x: 0, y: 1, z: 0))
         }
         .buttonStyle(.plain)
         .accessibilityLabel(isOn ? "Starred" : "Not starred")

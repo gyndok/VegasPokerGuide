@@ -3,6 +3,7 @@ import SwiftUI
 struct MyScheduleTab: View {
     @Environment(AppState.self) private var state
     @State private var selected: Tournament? = nil
+    @State private var appeared = false
 
     var body: some View {
         NavigationStack {
@@ -60,12 +61,13 @@ struct MyScheduleTab: View {
                 if !state.conflicts.isEmpty {
                     conflictBanner
                 }
-                ForEach(groupedByDay(), id: \.0) { day, items in
+                ForEach(Array(groupedByDay().enumerated()), id: \.element.0) { groupIdx, pair in
+                    let (day, items) = pair
                     VStack(alignment: .leading, spacing: 0) {
                         AppDayHeader(date: day)
                             .padding(.horizontal, AppSpacing.l)
                         VStack(spacing: 0) {
-                            ForEach(items) { t in
+                            ForEach(Array(items.enumerated()), id: \.element.id) { itemIdx, t in
                                 Button {
                                     selected = t
                                     AppHaptics.eventOpened()
@@ -80,12 +82,20 @@ struct MyScheduleTab: View {
                                         }
                                 }
                                 .buttonStyle(.plain)
+                                .modifier(RowEnterTransition(index: groupIdx + itemIdx, appeared: $appeared))
                             }
                         }
                     }
                 }
             }
             .padding(.bottom, AppSpacing.xl)
+            .task {
+                // Trigger the staggered enter once per cold tab open
+                if !appeared {
+                    try? await Task.sleep(nanoseconds: 50_000_000)  // 50ms after first frame
+                    appeared = true
+                }
+            }
         }
         .background(AppColor.appBackground)
     }
