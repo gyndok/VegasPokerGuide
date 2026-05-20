@@ -122,7 +122,11 @@ struct ScheduleTab: View {
     }
 
     private func grouped() -> [(Date, [Tournament])] {
-        let cal = Calendar(identifier: .gregorian)
+        // Group by Pacific calendar day so the key aligns with the AppDayHeader's
+        // PT-zoned formatter. Using the user's local calendar here would shift
+        // dates by one day for users in CT/ET/UTC+.
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = TimeZone(identifier: "America/Los_Angeles")!
         var byDay: [Date: [Tournament]] = [:]
         for t in state.filtered() {
             let start = cal.startOfDay(for: t.datePT)
