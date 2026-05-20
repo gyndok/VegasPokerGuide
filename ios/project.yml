@@ -26,10 +26,10 @@ targets:
     info:
       path: Sources/Resources/Info.plist
       properties:
-        CFBundleDisplayName: Vegas Poker
+        CFBundleDisplayName: Kenny's List
         UILaunchScreen:
           UIColorName: ""
-        NSCalendarsUsageDescription: "Vegas Poker uses Calendar to add tournaments you star to your schedule."
+        NSCalendarsUsageDescription: "Kenny's List uses Calendar to add tournaments you star to your schedule."
         UIAppFonts:
           - Fraunces.ttf
           - InterVariable.ttf

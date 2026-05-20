@@ -140,7 +140,7 @@ struct SettingsSheet: View {
 
     private var aboutSection: some View {
         SectionCard(title: "ABOUT") {
-            Text("Vegas Poker Guide is a personal-use app. Tournament data is fetched from a public Google Sheet maintained by SpaceyFCB. Not affiliated with any venue.")
+            Text("Kenny's List is a personal-use app. Tournament data is fetched from a public Google Sheet maintained by SpaceyFCB. Not affiliated with any venue.")
                 .font(AppFont.notesBody)
                 .foregroundStyle(AppColor.Text.secondary)
                 .fixedSize(horizontal: false, vertical: true)
