@@ -1,0 +1,740 @@
+{
+  "generated_at": "2026-05-20T03:38:17Z",
+  "warnings": [
+    {
+      "row": 61,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-05-26T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n15:15",
+        "NLH",
+        "NLH 8-max",
+        5000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 108,
+      "issue": "unparseable LR: 'None'",
+      "raw_row": [
+        "2026-05-29T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "None",
+        "NLH",
+        "NLH Heads-Up 1A",
+        25000.0,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 127,
+      "issue": "unparseable LR: 'None'",
+      "raw_row": [
+        "2026-05-30T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "None",
+        "NLH",
+        "NLH Heads-Up 1B",
+        25000.0,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 129,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-05-30T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "O/8",
+        "O/8 Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 145,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-05-31T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH Highroller 1A",
+        10000.0,
+        "UL",
+        null
+      ]
+    },
+    {
+      "row": 162,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-01T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH Highroller 1B",
+        10000.0,
+        "UL",
+        null
+      ]
+    },
+    {
+      "row": 182,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-02T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "2-7 NL",
+        "2-7 NL Championship",
+        10000.0,
+        2.0,
+        null
+      ]
+    },
+    {
+      "row": 191,
+      "issue": "unparseable LR: 'Day 2\\n12:15'",
+      "raw_row": [
+        "2026-06-03T00:00:00",
+        "WSOP",
+        "10:00:00",
+        "Day 2\n12:15",
+        "NLH",
+        "NLH Monsterstack 1A",
+        1500.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 199,
+      "issue": "unparseable LR: 'Day 2\\n13:15'",
+      "raw_row": [
+        "2026-06-03T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n13:15",
+        "NLH",
+        "NLH Highroller 1A",
+        25000.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 211,
+      "issue": "unparseable LR: 'Day 2\\n12:15'",
+      "raw_row": [
+        "2026-06-04T00:00:00",
+        "WSOP",
+        "10:00:00",
+        "Day 2\n12:15",
+        "NLH",
+        "NLH Monsterstack 1B",
+        1500.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 221,
+      "issue": "unparseable LR: 'Day 2\\n13:15'",
+      "raw_row": [
+        "2026-06-04T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n13:15",
+        "NLH",
+        "NLH Highroller 1B",
+        25000.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 234,
+      "issue": "unparseable LR: 'Day 2\\n12:15'",
+      "raw_row": [
+        "2026-06-05T00:00:00",
+        "WSOP",
+        "10:00:00",
+        "Day 2\n12:15",
+        "NLH",
+        "NLH Monsterstack 1C",
+        1500.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 246,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-05T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "Stud",
+        "7-Card Stud Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 257,
+      "issue": "unparseable LR: 'Day 2\\n12:15'",
+      "raw_row": [
+        "2026-06-06T00:00:00",
+        "WSOP",
+        "10:00:00",
+        "Day 2\n12:15",
+        "NLH",
+        "NLH Monsterstack 1D",
+        1500.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 267,
+      "issue": "unparseable LR: 'Day 2\\n13:15'",
+      "raw_row": [
+        "2026-06-06T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n13:15",
+        "NLH",
+        "NLH Highroller 6-max",
+        25000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 294,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-07T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "Mixed",
+        "Dealers Choice Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 312,
+      "issue": "unparseable LR: 'Day 2'",
+      "raw_row": [
+        "2026-06-08T00:00:00",
+        "Wynn",
+        "11:00:00",
+        "Day 2",
+        "Seniors",
+        "NLH Seniors Highroller (3-Day)",
+        5000.0,
+        "UL",
+        300000.0
+      ]
+    },
+    {
+      "row": 315,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-08T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH Highroller",
+        50000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 336,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-09T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH",
+        3000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 340,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-06-09T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n15:15",
+        "PLO/8",
+        "PLO/8 Championship",
+        10000.0,
+        2.0,
+        null
+      ]
+    },
+    {
+      "row": 348,
+      "issue": "unparseable LR: datetime.datetime(1900, 1, 5, 0, 0)",
+      "raw_row": [
+        "2026-06-09T00:00:00",
+        "Golden Nugget",
+        "19:00:00",
+        "1900-01-05T00:00:00",
+        "NLH",
+        "NLH Tag Team",
+        250.0,
+        "UL",
+        20000.0
+      ]
+    },
+    {
+      "row": 360,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-06-10T00:00:00",
+        "WSOP",
+        "13:00:00",
+        "Day 2\n15:15",
+        "NLH",
+        "NLH Highroller",
+        100000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 383,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-11T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "FLH Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 405,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-12T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "Seniors",
+        "NLH Seniors Highroller",
+        5000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 431,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-13T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH Super Highroller",
+        250000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 434,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-06-13T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n15:15",
+        "PLO/8",
+        "Big O Championship",
+        10000.0,
+        2.0,
+        null
+      ]
+    },
+    {
+      "row": 476,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-15T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "PLO",
+        "PLO Highroller 1A",
+        25000.0,
+        "2/fl",
+        null
+      ]
+    },
+    {
+      "row": 478,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-15T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "Razz",
+        "Razz Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 499,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-16T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "PLO",
+        "PLO Highroller 1B",
+        25000.0,
+        "2/fl",
+        null
+      ]
+    },
+    {
+      "row": 551,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-18T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "Mixed",
+        "HORSE Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 571,
+      "issue": "unparseable LR: 'Day 2\\n13:00'",
+      "raw_row": [
+        "2026-06-19T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n13:00",
+        "PLO",
+        "PLO Highroller",
+        50000.0,
+        2.0,
+        null
+      ]
+    },
+    {
+      "row": 625,
+      "issue": "unparseable LR: 'Day 2\\n19:30'",
+      "raw_row": [
+        "2026-06-21T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n19:30",
+        "Mixed",
+        "Poker Players Championship",
+        50000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 666,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-23T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "Mixed",
+        "PLO - NLH High Roller",
+        25000.0,
+        2.0,
+        null
+      ]
+    },
+    {
+      "row": 696,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-24T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "2-7 Limit",
+        "2-7 Triple Draw Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 740,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-06-26T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n15:15",
+        "PLO",
+        "PLO Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 782,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-28T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH 6-max",
+        5000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 808,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-29T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "Stud/8",
+        "Stud/8 Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 827,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-06-30T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "PLO",
+        "PLO Highroller",
+        100000.0,
+        2.0,
+        null
+      ]
+    },
+    {
+      "row": 851,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-07-01T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n14:15",
+        "Mixed",
+        "8-Game Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 866,
+      "issue": "unparseable LR: 'Day 2\\n15:40'",
+      "raw_row": [
+        "2026-07-02T00:00:00",
+        "WSOP",
+        "11:00:00",
+        "Day 2\n15:40",
+        "NLH",
+        "Main Event 1A",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 882,
+      "issue": "unparseable LR: 'Day 2\\n15:40'",
+      "raw_row": [
+        "2026-07-03T00:00:00",
+        "WSOP",
+        "11:00:00",
+        "Day 2\n15:40",
+        "NLH",
+        "Main Event 1B",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 901,
+      "issue": "unparseable LR: 'Day 2\\n15:40'",
+      "raw_row": [
+        "2026-07-04T00:00:00",
+        "WSOP",
+        "11:00:00",
+        "Day 2\n15:40",
+        "NLH",
+        "Main Event 1C",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 916,
+      "issue": "unparseable LR: 'Day 2\\n15:40'",
+      "raw_row": [
+        "2026-07-05T00:00:00",
+        "WSOP",
+        "11:00:00",
+        "Day 2\n15:40",
+        "NLH",
+        "Main Event 1D",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 978,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-07-08T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH Midstakes Championship 1A",
+        3000.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 996,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-07-09T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH Midstakes Championship 1B",
+        3000.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 998,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-07-09T00:00:00",
+        "WSOP",
+        "13:00:00",
+        "Day 2\n15:15",
+        "NLH",
+        "NLH Highroller",
+        50000.0,
+        1.0,
+        null
+      ]
+    },
+    {
+      "row": 1013,
+      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "raw_row": [
+        "2026-07-10T00:00:00",
+        "WSOP",
+        "12:00:00",
+        "Day 2\n14:15",
+        "NLH",
+        "NLH Midstakes Championship 1C",
+        3000.0,
+        "1/fl",
+        null
+      ]
+    },
+    {
+      "row": 1029,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-07-11T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n15:15",
+        "NLH",
+        "NLH 6-max Championship",
+        10000.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "row": 1055,
+      "issue": "unparseable LR: 'Day 2\\n15:15'",
+      "raw_row": [
+        "2026-07-13T00:00:00",
+        "WSOP",
+        "14:00:00",
+        "Day 2\n15:15",
+        "Mixed",
+        "HORSE High Roller",
+        25000.0,
+        1.0,
+        null
+      ]
+    }
+  ]
+}
