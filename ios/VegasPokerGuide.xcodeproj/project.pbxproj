@@ -55,7 +55,6 @@
 		8EAD3028019DC36D8198C26A /* InterVariable-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED2AFC8DDF637E0B4370953 /* InterVariable-Italic.ttf */; };
 		8FB8AA94C3C3BACAF876E44E /* CountdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800B57BB325DD96B1328839 /* CountdownState.swift */; };
 		9AAD7C26E2B1D07176CA5460 /* MapsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C01E6D93F0B0275A9503A /* MapsLauncher.swift */; };
-		A32E573CE4142B8A1E7CEA66 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E7A02D4E0783B7DF8FE5C /* Theme.swift */; };
 		AA0E2CADCDE6AEC68265EDE9 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E871E9D868D912F933A274 /* SettingsSheet.swift */; };
 		B246FAFD6C79868415FB375E /* FeedDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359106E6F79F2E4736A8B11 /* FeedDecoder.swift */; };
 		B3748249DFA80B3B0B8F15CF /* venues_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C714D49032B3F7F45343426 /* venues_sample.json */; };
@@ -147,7 +146,6 @@
 		AB252C023E7C9381AED56EEC /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		AE8AC175719A879DA95A3966 /* Fraunces-OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fraunces-OFL.txt"; sourceTree = "<group>"; };
 		B18B5152E2F365F533C8DD4D /* AppSheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSheetHeader.swift; sourceTree = "<group>"; };
-		B19E7A02D4E0783B7DF8FE5C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B1B12C5BE100BFDF4E713EF2 /* AppRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowBackground.swift; sourceTree = "<group>"; };
 		B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatter.swift; sourceTree = "<group>"; };
 		B6C0212F5AC17639F8A91DCD /* AppTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTexture.swift; sourceTree = "<group>"; };
@@ -336,7 +334,6 @@
 			isa = PBXGroup;
 			children = (
 				1827494EA765301AA54437E1 /* GameCategoryStyle.swift */,
-				B19E7A02D4E0783B7DF8FE5C /* Theme.swift */,
 				6F4D0DAF68E5F7CB12249F5A /* VenueColor.swift */,
 				D5A7FB1FA76606FEE02C26C3 /* Components */,
 				F8187292501AC494B4059D20 /* Materials */,
@@ -582,7 +579,6 @@
 				027A4D188B693EC69BA7505B /* SectionCard.swift in Sources */,
 				AA0E2CADCDE6AEC68265EDE9 /* SettingsSheet.swift in Sources */,
 				B871C6AFE0CE736BE82F2697 /* StarToggle.swift in Sources */,
-				A32E573CE4142B8A1E7CEA66 /* Theme.swift in Sources */,
 				F5C9F1C35F1667E07A5FF6C1 /* Tournament.swift in Sources */,
 				3FBF06BCC2D17E94CB20329F /* VegasPokerGuideApp.swift in Sources */,
 				E9EF729613E8337F39CE3F31 /* Venue.swift in Sources */,
