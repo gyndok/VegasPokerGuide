@@ -156,7 +156,7 @@ struct PlayedTab: View {
             .padding(.horizontal, AppSpacing.l)
             .padding(.bottom, AppSpacing.s)
 
-            let records = state.playedRecords().sorted(by: { $0.recordedAt > $1.recordedAt })
+            let records = sortedByTournamentDate(state.playedRecords())
             List {
                 ForEach(records, id: \.id) { r in
                     let t = state.tournaments.first(where: { $0.id == r.id })
@@ -167,7 +167,7 @@ struct PlayedTab: View {
                                 .font(AppFont.eventName)
                                 .foregroundStyle(AppColor.Text.primary)
                                 .lineLimit(1)
-                            Text(subtitle(for: r))
+                            Text(subtitle(for: r, tournament: t))
                                 .font(AppFont.timestamp)
                                 .foregroundStyle(AppColor.Text.secondary)
                         }
@@ -216,8 +216,11 @@ struct PlayedTab: View {
     }
 
     /// Subtitle line: "May 20, 2026 · 2 entries · 10.7h" with optional segments dropped.
-    private func subtitle(for r: PlayedRecord) -> String {
-        var parts: [String] = [Self.dayFmt.string(from: r.recordedAt)]
+    /// Date is the tournament's actual date if available; falls back to the recorded-at date
+    /// for orphan records (tournament dropped from the feed).
+    private func subtitle(for r: PlayedRecord, tournament t: Tournament?) -> String {
+        let date = t?.datePT ?? r.recordedAt
+        var parts: [String] = [Self.dayFmt.string(from: date)]
         if r.entries > 1 {
             parts.append("\(r.entries) entries")
         }
@@ -225,5 +228,15 @@ struct PlayedTab: View {
             parts.append("\(formatHours(h))h")
         }
         return parts.joined(separator: " · ")
+    }
+
+    /// Sort played records by tournament date ascending (earliest first).
+    /// Records whose tournament no longer exists in the feed sink to the end.
+    private func sortedByTournamentDate(_ records: [PlayedRecord]) -> [PlayedRecord] {
+        let farFuture = Date.distantFuture
+        let dateForRecord: (PlayedRecord) -> Date = { r in
+            state.tournaments.first(where: { $0.id == r.id })?.datePT ?? farFuture
+        }
+        return records.sorted { dateForRecord($0) < dateForRecord($1) }
     }
 }
