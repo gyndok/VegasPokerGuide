@@ -35,28 +35,26 @@ jobs:
           download_sheet(Path(".work/sheet.xlsx"))
           PY
 
-      - name: Skip if unchanged
+      - name: Run tests
+        run: pytest -v
+
+      - name: Build feed
+        run: |
+          mkdir -p .out
+          python -m vpf.main --xlsx .work/sheet.xlsx --venues venues.yml --out-dir .out
+
+      - name: Check if data actually changed
         id: check
         run: |
           python - <<'PY'
           from pathlib import Path
-          from vpf.downloader import has_content_changed
-          changed = has_content_changed(Path(".work/sheet.xlsx"), Path(".last_sheet_hash"))
+          from vpf.downloader import has_data_changed
+          changed = has_data_changed(Path(".out"), Path(".last_data_hash"))
           print(f"changed={'true' if changed else 'false'}")
           import os
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
               f.write(f"changed={'true' if changed else 'false'}\n")
           PY
-
-      - name: Run tests
-        if: steps.check.outputs.changed == 'true'
-        run: pytest -v
-
-      - name: Build feed
-        if: steps.check.outputs.changed == 'true'
-        run: |
-          mkdir -p .out
-          python -m vpf.main --xlsx .work/sheet.xlsx --venues venues.yml --out-dir .out
 
       - name: Configure git user
         if: steps.check.outputs.changed == 'true'
@@ -88,5 +86,5 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         working-directory: ${{ github.workspace }}
         run: |
-          git add pipeline/.last_sheet_hash
-          git diff --staged --quiet || (git commit -m "chore: bump sheet hash" && git push origin HEAD:main)
+          git add pipeline/.last_data_hash
+          git diff --staged --quiet || (git commit -m "chore: bump data hash" && git push origin HEAD:main)
