@@ -4,11 +4,13 @@ struct RootTabs: View {
     var body: some View {
         TabView {
             ScheduleTab()
-                .tabItem { Label("Schedule", systemImage: "list.bullet") }
+                .tabItem { Label("SCHEDULE", systemImage: "list.bullet.rectangle") }
             MyScheduleTab()
-                .tabItem { Label("My Schedule", systemImage: "star.fill") }
+                .tabItem { Label("MY TABLE", systemImage: "star.square.fill") }
             PlayedTab()
-                .tabItem { Label("Played", systemImage: "checkmark.seal") }
+                .tabItem { Label("PLAYED", systemImage: "checkmark.rectangle.stack") }
         }
+        .tint(AppTabBar.selectedColor)
+        .background(AppColor.appBackground.ignoresSafeArea())
     }
 }

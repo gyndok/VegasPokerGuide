@@ -5,6 +5,7 @@ struct VegasPokerGuideApp: App {
     @State private var state: AppState
 
     init() {
+        AppTabBar.configure()
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         _state = State(initialValue: AppState(documentsDirectory: docs))
     }
