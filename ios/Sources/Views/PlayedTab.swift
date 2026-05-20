@@ -160,46 +160,27 @@ struct PlayedTab: View {
             List {
                 ForEach(records, id: \.id) { r in
                     let t = state.tournaments.first(where: { $0.id == r.id })
+                    let net = r.cashed - (r.buyIn * r.entries)
                     HStack(alignment: .center, spacing: AppSpacing.m) {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(t?.eventName ?? r.id)
                                 .font(AppFont.eventName)
                                 .foregroundStyle(AppColor.Text.primary)
                                 .lineLimit(1)
-                            Text(Self.dayFmt.string(from: r.recordedAt))
+                            Text(subtitle(for: r))
                                 .font(AppFont.timestamp)
                                 .foregroundStyle(AppColor.Text.secondary)
                         }
                         Spacer()
-                        VStack(alignment: .trailing, spacing: 2) {
-                            // $ IN line
-                            if r.entries > 1 {
-                                HStack(alignment: .firstTextBaseline, spacing: 4) {
-                                    Text("-$\((r.buyIn * r.entries).formatted(.number))")
-                                        .font(AppFont.buyIn)
-                                        .monospacedDigit()
-                                        .foregroundStyle(AppColor.Chip.red)
-                                    Text("(\(r.entries)×)")
-                                        .font(AppFont.meta)
-                                        .foregroundStyle(AppColor.Text.tertiary)
-                                }
-                            } else {
-                                Text("-$\(r.buyIn.formatted(.number))")
-                                    .font(AppFont.buyIn)
-                                    .monospacedDigit()
-                                    .foregroundStyle(AppColor.Chip.red)
-                            }
-                            // $ OUT line
-                            Text("+$\(r.cashed.formatted(.number))")
-                                .font(AppFont.buyIn)
+                        VStack(alignment: .trailing, spacing: 0) {
+                            Text(signed(net))
+                                .font(AppFont.buyInLarge)
                                 .monospacedDigit()
-                                .foregroundStyle(AppColor.Chip.green)
-                            // Hours annotation
-                            if let h = r.hoursPlayed, h > 0 {
-                                Text("\(formatHours(h))h")
-                                    .font(AppFont.meta)
-                                    .foregroundStyle(AppColor.Text.tertiary)
-                            }
+                                .foregroundStyle(net >= 0 ? AppColor.Chip.green : AppColor.Chip.red)
+                            Text("NET")
+                                .font(AppFont.sectionLabel)
+                                .tracking(1.4)
+                                .foregroundStyle(AppColor.Text.tertiary)
                         }
                     }
                     .appRowStyle()
@@ -232,5 +213,17 @@ struct PlayedTab: View {
             return "\(Int(h))"
         }
         return String(format: "%.1f", h)
+    }
+
+    /// Subtitle line: "May 20, 2026 · 2 entries · 10.7h" with optional segments dropped.
+    private func subtitle(for r: PlayedRecord) -> String {
+        var parts: [String] = [Self.dayFmt.string(from: r.recordedAt)]
+        if r.entries > 1 {
+            parts.append("\(r.entries) entries")
+        }
+        if let h = r.hoursPlayed, h > 0 {
+            parts.append("\(formatHours(h))h")
+        }
+        return parts.joined(separator: " · ")
     }
 }
