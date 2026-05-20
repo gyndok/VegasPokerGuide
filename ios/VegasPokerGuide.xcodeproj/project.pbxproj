@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00883FB9406B3EC3F6AF6BA0 /* ReEntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */; };
+		027A4D188B693EC69BA7505B /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF02A72F090C0EFE6EC0EA4 /* SectionCard.swift */; };
 		02BE7777583D5AD349F81FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E390ACDBF56732C2089CCCE /* Assets.xcassets */; };
 		081C4D036BF9B227232AE7CB /* PlayedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB89C8CAA3BA32F28827BF9 /* PlayedTab.swift */; };
 		0832A5A8D5F92187B43DAA88 /* GameChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5C1BA97243242977EF542A /* GameChip.swift */; };
@@ -17,12 +18,14 @@
 		1819556B9DDBBE380A940A1A /* tournaments_seed.json in Resources */ = {isa = PBXBuildFile; fileRef = BDCC072E3C8569F2919E57BC /* tournaments_seed.json */; };
 		18D084C8B24F6C7B4F45E43B /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D93F68781E5ABD11FC6691B /* NotificationScheduler.swift */; };
 		1A8D610DA683C5B55715D37A /* CountdownBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA592CD15473B9A7408DD7 /* CountdownBadge.swift */; };
+		208A49D47956B872749FBE79 /* AppSheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B5152E2F365F533C8DD4D /* AppSheetHeader.swift */; };
 		24B7D3FEBD30AA9F9754990A /* DayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79E122638CF34C56BC54D6 /* DayHeader.swift */; };
 		24BB36ACDD86ED174A602B27 /* Inter-OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44BE4A300115873E6FB2188C /* Inter-OFL.txt */; };
 		28A5C8B0D81B387BF7FB94DC /* ScheduleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */; };
 		2A44D6D6F439DD9AC0A6E061 /* GameCategoryStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827494EA765301AA54437E1 /* GameCategoryStyle.swift */; };
 		2A72FA2731845F22F625FDE0 /* JetBrainsMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40E56465388DF119B03C35DB /* JetBrainsMono.ttf */; };
 		2D0CA465517BFD247F2877EA /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25B8CCCA65E5A517352BEEF /* EventDetail.swift */; };
+		34981A9DCEC5A34588E9490D /* AppRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B12C5BE100BFDF4E713EF2 /* AppRowBackground.swift */; };
 		37254C180055D5FB9E4A3A41 /* MyScheduleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1A50AEF7B7A8916E9ACD6 /* MyScheduleTab.swift */; };
 		390EA12895B76240F79A943F /* AppRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3654AFC9D13BE80F747BCB17 /* AppRadius.swift */; };
 		3942D12395E9597C31A64ABA /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CEF827B654A9C957E83C9 /* AppColor.swift */; };
@@ -40,6 +43,7 @@
 		60524830626F3B60227FAFCB /* FiltersSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597D2417ADA335B83746B62 /* FiltersSheet.swift */; };
 		6716A99B14E33A4A1CF69E6E /* VenueColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D0DAF68E5F7CB12249F5A /* VenueColor.swift */; };
 		6A337A0B55C4CF3B14FA6682 /* AppHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FC981258A2AF44571F7A4 /* AppHaptics.swift */; };
+		6E3DBF0922356C00BCB63248 /* AppToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A64CF6AACD3457F3675230 /* AppToolbar.swift */; };
 		75FE7F9F9B12A2936EFE7597 /* FavoritesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124379B434732A00D6F87E9 /* FavoritesStoreTests.swift */; };
 		7D7419844B2EC57D1D148E48 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F80E5F17DE17A961D51BC /* AppState.swift */; };
 		7D8622B9448B7F05E81444B0 /* JetBrainsMono-OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 570581B455350793D459FB7C /* JetBrainsMono-OFL.txt */; };
@@ -65,6 +69,7 @@
 		E9EF729613E8337F39CE3F31 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2B0631573ED8F3AE740B2 /* Venue.swift */; };
 		EADEC3D0BB2ECF2884B3DE90 /* Fraunces-OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE8AC175719A879DA95A3966 /* Fraunces-OFL.txt */; };
 		EB35CA7B4CD6AA1B243DA181 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A3C1DFF2ED31E56707EB1 /* Config.swift */; };
+		F0309BEA74014BA6549A5F17 /* AppEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3A8EC99E38440C649A16 /* AppEmptyState.swift */; };
 		F078C2AE87C4B502E080FD88 /* GameCategoryChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6BC2086D728A099FE0D7B /* GameCategoryChip.swift */; };
 		F165CACE93916BA0FEAEE9CB /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BFB5DA9C4525FA344D2637 /* AppFont.swift */; };
 		F5C01AAB4B4C2228698D3773 /* FeedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C59425EB78D5C34CF7C87C /* FeedClient.swift */; };
@@ -115,6 +120,7 @@
 		61EAEFD962C35B7E01C29438 /* CountdownStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownStateTests.swift; sourceTree = "<group>"; };
 		6597D2417ADA335B83746B62 /* FiltersSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersSheet.swift; sourceTree = "<group>"; };
 		669E0E6003B69AAC60A580B9 /* InterVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InterVariable.ttf; sourceTree = "<group>"; };
+		69BE3A8EC99E38440C649A16 /* AppEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEmptyState.swift; sourceTree = "<group>"; };
 		6AF944D7F6CCFA4631CE5082 /* StarToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarToggle.swift; sourceTree = "<group>"; };
 		6F4D0DAF68E5F7CB12249F5A /* VenueColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueColor.swift; sourceTree = "<group>"; };
 		713ED26C7D061852142D83A3 /* FeedDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDocuments.swift; sourceTree = "<group>"; };
@@ -127,11 +133,15 @@
 		94100DD8A5601957AA20FFBD /* VegasPokerGuideTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VegasPokerGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		967025B276D3EF9211DAA64C /* FeedDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDecodingTests.swift; sourceTree = "<group>"; };
 		995950090B9F7FBC85DDF378 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		9BF02A72F090C0EFE6EC0EA4 /* SectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCard.swift; sourceTree = "<group>"; };
 		A46D9E18AD0DC5448AE3F908 /* RootTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabs.swift; sourceTree = "<group>"; };
+		A6A64CF6AACD3457F3675230 /* AppToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToolbar.swift; sourceTree = "<group>"; };
 		A915DECEA1B9512AB66FDAD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AB252C023E7C9381AED56EEC /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		AE8AC175719A879DA95A3966 /* Fraunces-OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fraunces-OFL.txt"; sourceTree = "<group>"; };
+		B18B5152E2F365F533C8DD4D /* AppSheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSheetHeader.swift; sourceTree = "<group>"; };
 		B19E7A02D4E0783B7DF8FE5C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B1B12C5BE100BFDF4E713EF2 /* AppRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowBackground.swift; sourceTree = "<group>"; };
 		B2CC9623E21597F2A1318E47 /* ReEntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatter.swift; sourceTree = "<group>"; };
 		B6C0212F5AC17639F8A91DCD /* AppTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTexture.swift; sourceTree = "<group>"; };
 		BA1CEF827B654A9C957E83C9 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
@@ -296,9 +306,14 @@
 			isa = PBXGroup;
 			children = (
 				2172EAB7CDE6FD544C2F5D6E /* AppDayHeader.swift */,
+				69BE3A8EC99E38440C649A16 /* AppEmptyState.swift */,
+				B1B12C5BE100BFDF4E713EF2 /* AppRowBackground.swift */,
+				B18B5152E2F365F533C8DD4D /* AppSheetHeader.swift */,
+				A6A64CF6AACD3457F3675230 /* AppToolbar.swift */,
 				35DDAF45F7D25EA76C14B66E /* BuyInBadge.swift */,
 				C0DA592CD15473B9A7408DD7 /* CountdownBadge.swift */,
 				BB5C1BA97243242977EF542A /* GameChip.swift */,
+				9BF02A72F090C0EFE6EC0EA4 /* SectionCard.swift */,
 				6AF944D7F6CCFA4631CE5082 /* StarToggle.swift */,
 				DE22E033BE6AC9414257BC31 /* VenueChip.swift */,
 			);
@@ -484,7 +499,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\ncd \"${SRCROOT}\"\nPBXPROJ=\"${SRCROOT}/VegasPokerGuide.xcodeproj/project.pbxproj\"\nNEEDS_REGEN=0\nif [ ! -f \"$PBXPROJ\" ] || [ \"project.yml\" -nt \"$PBXPROJ\" ]; then\n  NEEDS_REGEN=1\nelif find Sources Tests -type d -newer \"$PBXPROJ\" -print -quit 2>/dev/null | grep -q .; then\n  NEEDS_REGEN=1\nfi\nif [ \"$NEEDS_REGEN\" = \"0\" ]; then exit 0; fi\nif command -v xcodegen >/dev/null 2>&1; then XCODEGEN=xcodegen\nelif [ -x /opt/homebrew/bin/xcodegen ]; then XCODEGEN=/opt/homebrew/bin/xcodegen\nelif [ -x /usr/local/bin/xcodegen ]; then XCODEGEN=/usr/local/bin/xcodegen\nelse echo \"warning: install xcodegen via 'brew install xcodegen'\"; exit 0; fi\n\"$XCODEGEN\" generate\necho \"warning: Regenerated VegasPokerGuide.xcodeproj — close and reopen if files appear missing.\"\n";
+			shellScript = "set -e\ncd \"/Users/gyndok/Developer/VegasPokerGuide/ios\"\nPBXPROJ=\"/Users/gyndok/Developer/VegasPokerGuide/ios/VegasPokerGuide.xcodeproj/project.pbxproj\"\nNEEDS_REGEN=0\nif [ ! -f \"$PBXPROJ\" ] || [ \"project.yml\" -nt \"$PBXPROJ\" ]; then\n  NEEDS_REGEN=1\nelif find Sources Tests -type d -newer \"$PBXPROJ\" -print -quit 2>/dev/null | grep -q .; then\n  NEEDS_REGEN=1\nfi\nif [ \"$NEEDS_REGEN\" = \"0\" ]; then exit 0; fi\nif command -v xcodegen >/dev/null 2>&1; then XCODEGEN=xcodegen\nelif [ -x /opt/homebrew/bin/xcodegen ]; then XCODEGEN=/opt/homebrew/bin/xcodegen\nelif [ -x /usr/local/bin/xcodegen ]; then XCODEGEN=/usr/local/bin/xcodegen\nelse echo \"warning: install xcodegen via 'brew install xcodegen'\"; exit 0; fi\n\"$XCODEGEN\" generate\necho \"warning: Regenerated VegasPokerGuide.xcodeproj — close and reopen if files appear missing.\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -508,14 +523,18 @@
 			files = (
 				3942D12395E9597C31A64ABA /* AppColor.swift in Sources */,
 				5ED34A553FD3B540FBAC7408 /* AppDayHeader.swift in Sources */,
+				F0309BEA74014BA6549A5F17 /* AppEmptyState.swift in Sources */,
 				F165CACE93916BA0FEAEE9CB /* AppFont.swift in Sources */,
 				499420AD99BD15D2532B487E /* AppHairline.swift in Sources */,
 				6A337A0B55C4CF3B14FA6682 /* AppHaptics.swift in Sources */,
 				390EA12895B76240F79A943F /* AppRadius.swift in Sources */,
+				34981A9DCEC5A34588E9490D /* AppRowBackground.swift in Sources */,
 				D16489AE373F14BA51C0AADD /* AppShadow.swift in Sources */,
+				208A49D47956B872749FBE79 /* AppSheetHeader.swift in Sources */,
 				3B13322FBFD928BE83B4EC9F /* AppSpacing.swift in Sources */,
 				7D7419844B2EC57D1D148E48 /* AppState.swift in Sources */,
 				445A1B6117DE9D0B074839B5 /* AppTexture.swift in Sources */,
+				6E3DBF0922356C00BCB63248 /* AppToolbar.swift in Sources */,
 				DA592B168193A84CED9260EF /* BuyInBadge.swift in Sources */,
 				B698A4144018048988FDA97F /* CalendarExporter.swift in Sources */,
 				EB35CA7B4CD6AA1B243DA181 /* Config.swift in Sources */,
@@ -544,6 +563,7 @@
 				00883FB9406B3EC3F6AF6BA0 /* ReEntryFormatter.swift in Sources */,
 				8C6DF012080603DB7F0320B8 /* RootTabs.swift in Sources */,
 				28A5C8B0D81B387BF7FB94DC /* ScheduleTab.swift in Sources */,
+				027A4D188B693EC69BA7505B /* SectionCard.swift in Sources */,
 				AA0E2CADCDE6AEC68265EDE9 /* SettingsSheet.swift in Sources */,
 				B871C6AFE0CE736BE82F2697 /* StarToggle.swift in Sources */,
 				A32E573CE4142B8A1E7CEA66 /* Theme.swift in Sources */,
