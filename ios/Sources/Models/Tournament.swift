@@ -14,6 +14,7 @@ struct Tournament: Codable, Identifiable, Hashable {
     let reEntry: ReEntry
     let isDay2: Bool
     let flightGroup: String
+    let structurePDFURL: String?    // per-event PDF; nil falls back to venue URL
     let notes: String?
 
     enum CodingKeys: String, CodingKey {
@@ -29,6 +30,7 @@ struct Tournament: Codable, Identifiable, Hashable {
         case reEntry = "re_entry"
         case isDay2 = "is_day2"
         case flightGroup = "flight_group"
+        case structurePDFURL = "structure_pdf_url"
         case notes
     }
 }

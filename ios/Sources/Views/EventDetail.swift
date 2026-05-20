@@ -183,7 +183,11 @@ struct EventDetail: View {
     @ViewBuilder
     private func actionsSection(venue: Venue?) -> some View {
         VStack(spacing: AppSpacing.s) {
-            if let urlStr = venue?.structurePDFURL, let url = URL(string: urlStr), !urlStr.isEmpty {
+            // Prefer per-event structure URL when available; fall back to the venue-wide URL.
+            let pdfURLString = tournament.structurePDFURL?.isEmpty == false
+                ? tournament.structurePDFURL
+                : venue?.structurePDFURL
+            if let urlStr = pdfURLString, let url = URL(string: urlStr), !urlStr.isEmpty {
                 Link(destination: url) {
                     AppButtonLikeRow(title: "OPEN STRUCTURE SHEET", systemImage: "doc.text", style: .secondary)
                 }

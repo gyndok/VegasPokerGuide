@@ -1,11 +1,12 @@
 import argparse
+import dataclasses
 from datetime import datetime, timezone
 from pathlib import Path
 
 from openpyxl import load_workbook
 
-from vpf.tournaments import parse_list_tab, ParseWarning
-from vpf.venues import extract_schedule_hyperlinks, load_venues, slug_for_venue_display, merge_pdf_urls
+from vpf.tournaments import parse_list_tab, ParseWarning, Tournament
+from vpf.venues import extract_schedule_hyperlinks, extract_event_hyperlinks, load_venues, slug_for_venue_display, merge_pdf_urls
 from vpf.writers import write_tournaments_json, write_venues_json, write_warnings_json
 
 
@@ -19,6 +20,22 @@ def build_feed(xlsx_path: Path, venues_yml: Path, out_dir: Path) -> None:
     discovered_urls = extract_schedule_hyperlinks(wb_links["Schedule 2026"])
     venues = load_venues(venues_yml)
     venues = merge_pdf_urls(venues, discovered_urls)
+
+    # Extract per-event hyperlinks from the Schedule tab and attach to tournaments.
+    event_links = extract_event_hyperlinks(wb_links["Schedule 2026"])
+    enriched: list[Tournament] = []
+    for t in tournaments:
+        key = (t.venue_display, t.date_pt, t.event_name)
+        url = event_links.get(key)
+        if url is None:
+            # Try with stripped whitespace in case of trailing spaces in the sheet.
+            key2 = (t.venue_display, t.date_pt, t.event_name.strip())
+            url = event_links.get(key2)
+        if url is not None:
+            enriched.append(dataclasses.replace(t, structure_pdf_url=url))
+        else:
+            enriched.append(t)
+    tournaments = enriched
 
     venue_slug_lookup: dict[str, str] = {}
     for t in tournaments:

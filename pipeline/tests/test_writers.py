@@ -52,6 +52,7 @@ def test_tournaments_json_shape(tmp_path: Path):
     assert t["re_entry"] == {"type": "unlimited", "count": None, "raw": "UL"}
     assert t["is_day2"] is False
     assert t["flight_group"] == "NLH"
+    assert t["structure_pdf_url"] is None
 
 
 def test_venues_json_shape(tmp_path: Path):

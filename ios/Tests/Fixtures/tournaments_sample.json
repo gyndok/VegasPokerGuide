@@ -16,6 +16,7 @@
       "re_entry": { "type": "unlimited", "count": null, "raw": "UL" },
       "is_day2": false,
       "flight_group": "NLH",
+      "structure_pdf_url": "https://example.com/per-event.pdf",
       "notes": null
     },
     {
@@ -32,6 +33,7 @@
       "re_entry": { "type": "unknown", "count": null, "raw": "" },
       "is_day2": true,
       "flight_group": "NLH",
+      "structure_pdf_url": null,
       "notes": null
     }
   ]

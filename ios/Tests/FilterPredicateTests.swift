@@ -15,19 +15,19 @@ final class FilterPredicateTests: XCTestCase {
             Tournament(id: "a", venue: "venetian", datePT: date, startAtPT: start, lateRegCloseAtPT: lr1,
                        game: "NLH", gameCategory: .nlh, eventName: "NLH 1B", buyInUSD: 600, guaranteeUSD: 150000,
                        reEntry: ReEntry(type: .unlimited, count: nil, raw: "UL"),
-                       isDay2: false, flightGroup: "NLH", notes: nil),
+                       isDay2: false, flightGroup: "NLH", structurePDFURL: nil, notes: nil),
             Tournament(id: "b", venue: "wynn", datePT: date, startAtPT: start, lateRegCloseAtPT: lr1,
                        game: "PLO", gameCategory: .plo, eventName: "PLO Bounty", buyInUSD: 1100, guaranteeUSD: 50000,
                        reEntry: ReEntry(type: .limited, count: 2, raw: "2"),
-                       isDay2: false, flightGroup: "PLO Bounty", notes: nil),
+                       isDay2: false, flightGroup: "PLO Bounty", structurePDFURL: nil, notes: nil),
             Tournament(id: "c", venue: "wynn", datePT: date, startAtPT: nil, lateRegCloseAtPT: nil,
                        game: "NLH", gameCategory: .nlh, eventName: "NLH Day 2", buyInUSD: nil, guaranteeUSD: nil,
                        reEntry: ReEntry(type: .unknown, count: nil, raw: ""),
-                       isDay2: true, flightGroup: "NLH", notes: nil),
+                       isDay2: true, flightGroup: "NLH", structurePDFURL: nil, notes: nil),
             Tournament(id: "d", venue: "venetian", datePT: date, startAtPT: start, lateRegCloseAtPT: lr2,
                        game: "NLH", gameCategory: .nlh, eventName: "Mini Mystery", buyInUSD: 550, guaranteeUSD: nil,
                        reEntry: ReEntry(type: .perFlight, count: 2, raw: "2/fl"),
-                       isDay2: false, flightGroup: "Mini Mystery", notes: nil),
+                       isDay2: false, flightGroup: "Mini Mystery", structurePDFURL: nil, notes: nil),
         ]
     }
 

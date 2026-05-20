@@ -28,6 +28,7 @@ def _t_to_dict(t: Tournament, venue_slug: str) -> dict:
         "re_entry": asdict(t.re_entry),
         "is_day2": t.is_day2,
         "flight_group": t.flight_group,
+        "structure_pdf_url": t.structure_pdf_url,
         "notes": None,
     }
 

@@ -24,6 +24,7 @@ class Tournament:
     re_entry: ReEntry
     is_day2: bool
     flight_group: str
+    structure_pdf_url: Optional[str] = None
 
 
 @dataclass(frozen=True)

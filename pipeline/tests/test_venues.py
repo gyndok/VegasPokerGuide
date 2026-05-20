@@ -1,7 +1,21 @@
 from openpyxl import load_workbook
 from pathlib import Path
 import pytest
-from vpf.venues import extract_schedule_hyperlinks, load_venues, slug_for_venue_display
+from vpf.venues import extract_schedule_hyperlinks, extract_event_hyperlinks, load_venues, slug_for_venue_display
+
+
+def test_extract_event_hyperlinks_returns_per_event_urls(sheet_xlsx):
+    wb = load_workbook(sheet_xlsx)
+    mapping = extract_event_hyperlinks(wb["Schedule 2026"])
+    # At least a few hundred per-event links should be present.
+    assert len(mapping) > 200
+    # Venetian NLH 1A is a known event; check we have a URL for it.
+    from datetime import date
+    venetian_keys = [k for k in mapping if k[0] == "Venetian" and "NLH 1A" in k[2]]
+    assert venetian_keys, "expected at least one Venetian NLH 1A entry"
+    # Each Venetian entry should point to a venetianlasvegas.com URL.
+    for k in venetian_keys[:3]:
+        assert "venetianlasvegas.com" in mapping[k]
 
 
 def test_extracts_pdf_urls(sheet_xlsx):
