@@ -36,7 +36,7 @@ struct EventRow: View {
                         Text("$\(buyIn)").font(.caption.monospacedDigit()).foregroundStyle(.secondary)
                     }
                     Spacer()
-                    CountdownBadge(lateRegClose: tournament.lateRegCloseAtPT)
+                    CountdownBadge(startAt: tournament.startAtPT, lateRegClose: tournament.lateRegCloseAtPT)
                 }
             }
         }

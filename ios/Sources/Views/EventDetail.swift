@@ -50,13 +50,14 @@ struct EventDetail: View {
                         statColumn("Late reg closes", value: timeString(tournament.lateRegCloseAtPT))
                     }
 
-                    // Live countdown
-                    if tournament.lateRegCloseAtPT != nil {
+                    // Live countdown (only when the event is actually running)
+                    let liveState = CountdownState.compute(startAt: tournament.startAtPT, lateRegClose: tournament.lateRegCloseAtPT)
+                    if liveState.isVisible {
                         HStack {
                             Spacer()
                             VStack(spacing: 4) {
                                 Text("Late reg closes in").font(.caption).foregroundStyle(.secondary)
-                                CountdownBadge(lateRegClose: tournament.lateRegCloseAtPT)
+                                CountdownBadge(startAt: tournament.startAtPT, lateRegClose: tournament.lateRegCloseAtPT)
                                     .scaleEffect(1.6)
                                     .padding(.vertical, 6)
                             }
