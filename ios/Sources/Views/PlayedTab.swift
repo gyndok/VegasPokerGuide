@@ -76,7 +76,7 @@ struct PlayedTab: View {
             let columns = [GridItem(.flexible(), spacing: AppSpacing.m),
                            GridItem(.flexible(), spacing: AppSpacing.m)]
             LazyVGrid(columns: columns, alignment: .center, spacing: AppSpacing.m) {
-                statCell(label: "ENTRIES",  value: "\(totals.count)",                          tone: .neutral)
+                statCell(label: "ENTRIES",  value: "\(totals.totalEntries)",                    tone: .neutral)
                 statCell(label: "$ IN",     value: "$\(totals.totalIn.formatted(.number))",    tone: .neutral)
                 statCell(label: "$ OUT",    value: "$\(totals.totalCashed.formatted(.number))", tone: .cashed)
                 statCell(label: "NET",      value: signed(totals.net),                         tone: totals.net >= 0 ? .cashed : .lost)

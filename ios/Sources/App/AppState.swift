@@ -153,10 +153,12 @@ final class AppState {
     func playedRecords() -> [PlayedRecord] { Array(playedByID.values) }
     func playedTotals() -> PlayedTotals {
         let records = playedByID.values
+        let totalEntries = records.reduce(0) { $0 + $1.entries }
         let totalIn = records.reduce(0) { $0 + $1.buyIn * $1.entries }
         let totalCashed = records.reduce(0) { $0 + $1.cashed }
         let totalHours = records.reduce(0.0) { $0 + ($1.hoursPlayed ?? 0.0) }
-        return PlayedTotals(count: records.count, totalIn: totalIn, totalCashed: totalCashed, totalHours: totalHours)
+        return PlayedTotals(count: records.count, totalEntries: totalEntries,
+                            totalIn: totalIn, totalCashed: totalCashed, totalHours: totalHours)
     }
     func recordPlayed(id: String, buyIn: Int, cashed: Int, entries: Int = 1, hoursPlayed: Double? = nil) {
         store.recordPlayed(id: id, buyIn: buyIn, cashed: cashed, entries: entries, hoursPlayed: hoursPlayed)

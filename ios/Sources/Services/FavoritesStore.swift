@@ -30,7 +30,10 @@ struct PlayedRecord: Codable, Equatable {
 }
 
 struct PlayedTotals: Equatable {
+    /// Number of unique tournament records.
     let count: Int
+    /// Total bullets fired across all records (sum of each record's `entries`).
+    let totalEntries: Int
     let totalIn: Int
     let totalCashed: Int
     let totalHours: Double
@@ -100,10 +103,12 @@ final class FavoritesStore {
     }
     func playedRecords() -> [PlayedRecord] { played }
     func playedTotals() -> PlayedTotals {
+        let totalEntries = played.reduce(0) { $0 + $1.entries }
         let totalIn = played.reduce(0) { $0 + $1.buyIn * $1.entries }
         let totalCashed = played.reduce(0) { $0 + $1.cashed }
         let totalHours = played.reduce(0.0) { $0 + ($1.hoursPlayed ?? 0.0) }
-        return PlayedTotals(count: played.count, totalIn: totalIn, totalCashed: totalCashed, totalHours: totalHours)
+        return PlayedTotals(count: played.count, totalEntries: totalEntries,
+                            totalIn: totalIn, totalCashed: totalCashed, totalHours: totalHours)
     }
 
     // MARK: Notifications
