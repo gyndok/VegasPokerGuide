@@ -32,8 +32,10 @@ struct AppDayHeader: View {
     }
 
     private func relativeLabel(for date: Date) -> String? {
-        if Calendar.current.isDateInToday(date) { return "TODAY" }
-        if Calendar.current.isDateInTomorrow(date) { return "TOMORROW" }
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = TimeZone(identifier: "America/Los_Angeles")!
+        if cal.isDateInToday(date) { return "TODAY" }
+        if cal.isDateInTomorrow(date) { return "TOMORROW" }
         return nil
     }
 }

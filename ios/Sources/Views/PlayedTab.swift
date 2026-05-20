@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PlayedTab: View {
     @Environment(AppState.self) private var state
+    @State private var editingTournament: Tournament? = nil
 
     private static let dayFmt: DateFormatter = {
         let f = DateFormatter()
@@ -25,6 +26,9 @@ struct PlayedTab: View {
             .background(AppColor.appBackground.ignoresSafeArea())
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(.hidden, for: .navigationBar)
+            .sheet(item: $editingTournament) { t in
+                EventDetail(tournament: t).environment(state)
+            }
         }
     }
 
@@ -56,12 +60,10 @@ struct PlayedTab: View {
     // MARK: - Body
 
     private var body_: some View {
-        ScrollView {
-            VStack(spacing: AppSpacing.l) {
-                summaryCard
-                logList
-            }
-            .padding(.bottom, AppSpacing.xl)
+        VStack(spacing: 0) {
+            summaryCard
+                .padding(.bottom, AppSpacing.l)
+            logList
         }
         .background(AppColor.appBackground)
     }
@@ -154,9 +156,9 @@ struct PlayedTab: View {
             .padding(.horizontal, AppSpacing.l)
             .padding(.bottom, AppSpacing.s)
 
-            VStack(spacing: 0) {
-                let records = state.playedRecords().sorted(by: { $0.recordedAt > $1.recordedAt })
-                ForEach(Array(records.enumerated()), id: \.element.id) { index, r in
+            let records = state.playedRecords().sorted(by: { $0.recordedAt > $1.recordedAt })
+            List {
+                ForEach(records, id: \.id) { r in
                     let t = state.tournaments.first(where: { $0.id == r.id })
                     HStack(alignment: .center, spacing: AppSpacing.m) {
                         VStack(alignment: .leading, spacing: 4) {
@@ -200,14 +202,28 @@ struct PlayedTab: View {
                             }
                         }
                     }
-                    .padding(.horizontal, AppSpacing.l)
-                    .padding(.vertical, AppSpacing.m)
-                    .background(AppColor.cardSurface)
-                    .overlay(alignment: .bottom) {
-                        if index < records.count - 1 { AppHairline.divider(opacity: 0.35) }
+                    .appRowStyle()
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            AppHaptics.starToggled()
+                            state.unrecordPlayed(id: r.id)
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
+                        if let tournament = t {
+                            Button {
+                                editingTournament = tournament
+                            } label: {
+                                Label("Edit", systemImage: "pencil")
+                            }
+                            .tint(AppColor.Foil.bright)
+                        }
                     }
                 }
             }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(AppColor.appBackground)
         }
     }
 

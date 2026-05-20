@@ -6,6 +6,7 @@ struct ScheduleTab: View {
     @State private var showingSettings = false
     @State private var selected: Tournament? = nil
     @State private var appeared = false
+    @State private var didInitialScroll = false
 
     var body: some View {
         @Bindable var bindable = state
@@ -22,42 +23,54 @@ struct ScheduleTab: View {
                     .padding(.bottom, AppSpacing.s)
 
                 // Day-grouped list
-                List {
-                    ForEach(grouped(), id: \.0) { day, items in
-                        Section {
-                            ForEach(Array(items.enumerated()), id: \.element.id) { idx, t in
-                                Button {
-                                    selected = t
-                                    AppHaptics.eventOpened()
-                                } label: {
-                                    EventRow(tournament: t,
-                                             venue: state.venue(slug: t.venue),
-                                             isStarred: state.isStarred(t.id))
+                ScrollViewReader { proxy in
+                    List {
+                        ForEach(grouped(), id: \.0) { day, items in
+                            Section {
+                                ForEach(Array(items.enumerated()), id: \.element.id) { idx, t in
+                                    Button {
+                                        selected = t
+                                        AppHaptics.eventOpened()
+                                    } label: {
+                                        EventRow(tournament: t,
+                                                 venue: state.venue(slug: t.venue),
+                                                 isStarred: state.isStarred(t.id))
+                                    }
+                                    .buttonStyle(.plain)
+                                    .appRowStyle()
+                                    .modifier(RowEnterTransition(index: idx, appeared: $appeared))
                                 }
-                                .buttonStyle(.plain)
-                                .appRowStyle()
-                                .modifier(RowEnterTransition(index: idx, appeared: $appeared))
+                            } header: {
+                                AppDayHeader(date: day)
+                                    .padding(.horizontal, AppSpacing.l)
+                                    .padding(.top, AppSpacing.s)
+                                    .listRowInsets(EdgeInsets())
+                                    .background(AppColor.appBackground)
+                                    .id(day)
                             }
-                        } header: {
-                            AppDayHeader(date: day)
-                                .padding(.horizontal, AppSpacing.l)
-                                .padding(.top, AppSpacing.s)
-                                .listRowInsets(EdgeInsets())
-                                .background(AppColor.appBackground)
                         }
                     }
-                }
-                .listStyle(.plain)
-                .listSectionSeparator(.hidden)
-                .scrollContentBackground(.hidden)
-                .background(AppColor.appBackground)
-                .refreshable { await state.refresh() }
-                .tint(AppColor.Foil.bright)
-                .task {
-                    // Trigger the staggered enter once per cold tab open
-                    if !appeared {
-                        try? await Task.sleep(nanoseconds: 50_000_000)  // 50ms after first frame
-                        appeared = true
+                    .listStyle(.plain)
+                    .listSectionSeparator(.hidden)
+                    .scrollContentBackground(.hidden)
+                    .background(AppColor.appBackground)
+                    .refreshable { await state.refresh() }
+                    .tint(AppColor.Foil.bright)
+                    .task {
+                        // Trigger the staggered enter once per cold tab open
+                        if !appeared {
+                            try? await Task.sleep(nanoseconds: 50_000_000)  // 50ms after first frame
+                            appeared = true
+                        }
+                        // Scroll to today (or first future day) once per cold open
+                        if !didInitialScroll {
+                            let target = grouped().first(where: { $0.0 >= todayInPT() })?.0
+                            if let target {
+                                try? await Task.sleep(nanoseconds: 100_000_000)  // 100ms to let list render
+                                proxy.scrollTo(target, anchor: .top)
+                            }
+                            didInitialScroll = true
+                        }
                     }
                 }
             }
@@ -116,5 +129,11 @@ struct ScheduleTab: View {
             byDay[start, default: []].append(t)
         }
         return byDay.keys.sorted().map { ($0, byDay[$0]!) }
+    }
+
+    private func todayInPT() -> Date {
+        var cal = Calendar(identifier: .gregorian)
+        cal.timeZone = TimeZone(identifier: "America/Los_Angeles")!
+        return cal.startOfDay(for: Date())
     }
 }
