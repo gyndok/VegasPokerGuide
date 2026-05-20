@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsSheet: View {
     @Environment(AppState.self) private var state
     @Environment(\.dismiss) private var dismiss
+    @State private var showingHelp = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -10,6 +11,7 @@ struct SettingsSheet: View {
 
             ScrollView {
                 VStack(spacing: AppSpacing.l) {
+                    helpSection
                     feedSection
                     warningsSection
                     sourceSection
@@ -20,6 +22,39 @@ struct SettingsSheet: View {
             .background(AppColor.appBackground)
         }
         .background(AppColor.appBackground.ignoresSafeArea())
+        .sheet(isPresented: $showingHelp) {
+            HelpSheet()
+        }
+    }
+
+    // MARK: - Help
+
+    private var helpSection: some View {
+        SectionCard(title: "HELP") {
+            Button {
+                showingHelp = true
+            } label: {
+                HStack(spacing: AppSpacing.s) {
+                    Image(systemName: "questionmark.circle")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundStyle(AppColor.Foil.bright)
+                    Text("HOW TO USE")
+                        .font(AppFont.sectionLabel)
+                        .tracking(1.2)
+                        .foregroundStyle(AppColor.Foil.bright)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12))
+                        .foregroundStyle(AppColor.Foil.muted)
+                }
+                .padding(.horizontal, AppSpacing.m)
+                .padding(.vertical, AppSpacing.s)
+                .background(AppColor.Foil.bright.opacity(0.08), in: RoundedRectangle(cornerRadius: AppRadius.chip))
+                .overlay(RoundedRectangle(cornerRadius: AppRadius.chip)
+                    .strokeBorder(AppColor.Foil.bright.opacity(0.5), lineWidth: 0.8))
+            }
+            .buttonStyle(.plain)
+        }
     }
 
     // MARK: - Feed

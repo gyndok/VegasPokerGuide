@@ -49,6 +49,7 @@
 		6A337A0B55C4CF3B14FA6682 /* AppHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FC981258A2AF44571F7A4 /* AppHaptics.swift */; };
 		6E3DBF0922356C00BCB63248 /* AppToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A64CF6AACD3457F3675230 /* AppToolbar.swift */; };
 		75FE7F9F9B12A2936EFE7597 /* FavoritesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124379B434732A00D6F87E9 /* FavoritesStoreTests.swift */; };
+		7BDFC48A94052AAE909E9EB7 /* HelpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A853361E6EED5BED4F339 /* HelpSheet.swift */; };
 		7D7419844B2EC57D1D148E48 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F80E5F17DE17A961D51BC /* AppState.swift */; };
 		7D8622B9448B7F05E81444B0 /* JetBrainsMono-OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 570581B455350793D459FB7C /* JetBrainsMono-OFL.txt */; };
 		7FAFF2ED0A889805CED4312E /* FeedDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967025B276D3EF9211DAA64C /* FeedDecodingTests.swift */; };
@@ -136,6 +137,7 @@
 		7ECAB07F6A37B15A78835100 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
 		806BD6743E3BED903116095D /* AppPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPicker.swift; sourceTree = "<group>"; };
 		84DE8947ED8D5BC285719AD7 /* AppSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchField.swift; sourceTree = "<group>"; };
+		855A853361E6EED5BED4F339 /* HelpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSheet.swift; sourceTree = "<group>"; };
 		885A3C1DFF2ED31E56707EB1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		915F80E5F17DE17A961D51BC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		94100DD8A5601957AA20FFBD /* VegasPokerGuideTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VegasPokerGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 			children = (
 				C25B8CCCA65E5A517352BEEF /* EventDetail.swift */,
 				6597D2417ADA335B83746B62 /* FiltersSheet.swift */,
+				855A853361E6EED5BED4F339 /* HelpSheet.swift */,
 				F5C1A50AEF7B7A8916E9ACD6 /* MyScheduleTab.swift */,
 				0AB89C8CAA3BA32F28827BF9 /* PlayedTab.swift */,
 				A46D9E18AD0DC5448AE3F908 /* RootTabs.swift */,
@@ -571,6 +574,7 @@
 				DE076B3116D623998A66583E /* GameCategory.swift in Sources */,
 				2A44D6D6F439DD9AC0A6E061 /* GameCategoryStyle.swift in Sources */,
 				0832A5A8D5F92187B43DAA88 /* GameChip.swift in Sources */,
+				7BDFC48A94052AAE909E9EB7 /* HelpSheet.swift in Sources */,
 				9AAD7C26E2B1D07176CA5460 /* MapsLauncher.swift in Sources */,
 				37254C180055D5FB9E4A3A41 /* MyScheduleTab.swift in Sources */,
 				18D084C8B24F6C7B4F45E43B /* NotificationScheduler.swift in Sources */,
