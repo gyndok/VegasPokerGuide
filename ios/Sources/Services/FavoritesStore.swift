@@ -5,13 +5,44 @@ struct PlayedRecord: Codable, Equatable {
     let buyIn: Int
     let cashed: Int
     let recordedAt: Date
+    let entries: Int
+    let hoursPlayed: Double?
+
+    // Custom decoder for back-compat: existing JSON without `entries`/`hoursPlayed` still decodes.
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(String.self, forKey: .id)
+        buyIn = try c.decode(Int.self, forKey: .buyIn)
+        cashed = try c.decode(Int.self, forKey: .cashed)
+        recordedAt = try c.decode(Date.self, forKey: .recordedAt)
+        entries = (try? c.decodeIfPresent(Int.self, forKey: .entries)) ?? 1
+        hoursPlayed = try? c.decodeIfPresent(Double.self, forKey: .hoursPlayed)
+    }
+
+    init(id: String, buyIn: Int, cashed: Int, recordedAt: Date, entries: Int = 1, hoursPlayed: Double? = nil) {
+        self.id = id
+        self.buyIn = buyIn
+        self.cashed = cashed
+        self.recordedAt = recordedAt
+        self.entries = entries
+        self.hoursPlayed = hoursPlayed
+    }
 }
 
 struct PlayedTotals: Equatable {
     let count: Int
     let totalIn: Int
     let totalCashed: Int
+    let totalHours: Double
     var net: Int { totalCashed - totalIn }
+    var roi: Double? {
+        guard totalIn > 0 else { return nil }
+        return Double(net) / Double(totalIn)
+    }
+    var hourlyRate: Double? {
+        guard totalHours > 0 else { return nil }
+        return Double(net) / totalHours
+    }
 }
 
 final class FavoritesStore {
@@ -58,9 +89,9 @@ final class FavoritesStore {
     }
 
     // MARK: Played
-    func recordPlayed(id: String, buyIn: Int, cashed: Int, at: Date = Date()) {
+    func recordPlayed(id: String, buyIn: Int, cashed: Int, entries: Int = 1, hoursPlayed: Double? = nil, at: Date = Date()) {
         played.removeAll { $0.id == id }
-        played.append(PlayedRecord(id: id, buyIn: buyIn, cashed: cashed, recordedAt: at))
+        played.append(PlayedRecord(id: id, buyIn: buyIn, cashed: cashed, recordedAt: at, entries: entries, hoursPlayed: hoursPlayed))
         persist(played, to: playedURL)
     }
     func unrecordPlayed(id: String) {
@@ -69,9 +100,10 @@ final class FavoritesStore {
     }
     func playedRecords() -> [PlayedRecord] { played }
     func playedTotals() -> PlayedTotals {
-        let totalIn = played.reduce(0) { $0 + $1.buyIn }
+        let totalIn = played.reduce(0) { $0 + $1.buyIn * $1.entries }
         let totalCashed = played.reduce(0) { $0 + $1.cashed }
-        return PlayedTotals(count: played.count, totalIn: totalIn, totalCashed: totalCashed)
+        let totalHours = played.reduce(0.0) { $0 + ($1.hoursPlayed ?? 0.0) }
+        return PlayedTotals(count: played.count, totalIn: totalIn, totalCashed: totalCashed, totalHours: totalHours)
     }
 
     // MARK: Notifications

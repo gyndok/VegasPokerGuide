@@ -66,19 +66,20 @@ struct PlayedTab: View {
         .background(AppColor.appBackground)
     }
 
-    // MARK: - Summary card
+    // MARK: - Summary card (2-column × 3-row grid)
 
     private var summaryCard: some View {
         let totals = state.playedTotals()
         return SectionCard(title: "TOURNAMENT SUMMARY") {
-            HStack(alignment: .top, spacing: 0) {
-                statCell(label: "ENTRIES", value: "\(totals.count)", tone: .neutral)
-                AppHairline.vertical().frame(height: 48)
-                statCell(label: "$ IN", value: "$\(totals.totalIn.formatted(.number))", tone: .neutral)
-                AppHairline.vertical().frame(height: 48)
-                statCell(label: "$ CASHED", value: "$\(totals.totalCashed.formatted(.number))", tone: .cashed)
-                AppHairline.vertical().frame(height: 48)
-                statCell(label: "NET", value: signed(totals.net), tone: totals.net >= 0 ? .cashed : .lost)
+            let columns = [GridItem(.flexible(), spacing: AppSpacing.m),
+                           GridItem(.flexible(), spacing: AppSpacing.m)]
+            LazyVGrid(columns: columns, alignment: .center, spacing: AppSpacing.m) {
+                statCell(label: "ENTRIES",  value: "\(totals.count)",                          tone: .neutral)
+                statCell(label: "$ IN",     value: "$\(totals.totalIn.formatted(.number))",    tone: .neutral)
+                statCell(label: "$ OUT",    value: "$\(totals.totalCashed.formatted(.number))", tone: .cashed)
+                statCell(label: "NET",      value: signed(totals.net),                         tone: totals.net >= 0 ? .cashed : .lost)
+                statCell(label: "ROI",      value: roiString(totals.roi),                      tone: roiTone(totals.roi))
+                statCell(label: "HOURLY",   value: hourlyString(totals.hourlyRate),             tone: hourlyTone(totals.hourlyRate))
             }
         }
         .padding(.horizontal, AppSpacing.l)
@@ -89,17 +90,18 @@ struct PlayedTab: View {
     private func statCell(label: String, value: String, tone: Tone) -> some View {
         VStack(alignment: .center, spacing: AppSpacing.xs) {
             Text(value)
-                .font(AppFont.stat)
+                .font(AppFont.buyIn)
                 .monospacedDigit()
                 .foregroundStyle(color(for: tone))
                 .lineLimit(1)
-                .minimumScaleFactor(0.6)
+                .minimumScaleFactor(0.5)
             Text(label)
                 .font(AppFont.sectionLabel)
                 .tracking(1.2)
                 .foregroundStyle(AppColor.Text.tertiary)
         }
         .frame(maxWidth: .infinity)
+        .padding(.vertical, AppSpacing.xs)
     }
 
     private func color(for tone: Tone) -> Color {
@@ -113,6 +115,29 @@ struct PlayedTab: View {
     private func signed(_ amount: Int) -> String {
         let prefix = amount >= 0 ? "+" : "-"
         return "\(prefix)$\(abs(amount).formatted(.number))"
+    }
+
+    private func roiString(_ roi: Double?) -> String {
+        guard let roi else { return "—" }
+        let percent = Int((roi * 100).rounded())
+        let prefix = percent >= 0 ? "+" : ""
+        return "\(prefix)\(percent)%"
+    }
+
+    private func roiTone(_ roi: Double?) -> Tone {
+        guard let roi else { return .neutral }
+        return roi >= 0 ? .cashed : .lost
+    }
+
+    private func hourlyString(_ rate: Double?) -> String {
+        guard let rate, rate != 0 else { return "—" }
+        let prefix = rate >= 0 ? "+" : "-"
+        return "\(prefix)$\(Int(abs(rate).rounded()))/hr"
+    }
+
+    private func hourlyTone(_ rate: Double?) -> Tone {
+        guard let rate, rate != 0 else { return .neutral }
+        return rate >= 0 ? .cashed : .lost
     }
 
     // MARK: - Log list
@@ -145,14 +170,34 @@ struct PlayedTab: View {
                         }
                         Spacer()
                         VStack(alignment: .trailing, spacing: 2) {
-                            Text("-$\(r.buyIn.formatted(.number))")
-                                .font(AppFont.buyIn)
-                                .monospacedDigit()
-                                .foregroundStyle(AppColor.Chip.red)
+                            // $ IN line
+                            if r.entries > 1 {
+                                HStack(alignment: .firstTextBaseline, spacing: 4) {
+                                    Text("-$\((r.buyIn * r.entries).formatted(.number))")
+                                        .font(AppFont.buyIn)
+                                        .monospacedDigit()
+                                        .foregroundStyle(AppColor.Chip.red)
+                                    Text("(\(r.entries)×)")
+                                        .font(AppFont.meta)
+                                        .foregroundStyle(AppColor.Text.tertiary)
+                                }
+                            } else {
+                                Text("-$\(r.buyIn.formatted(.number))")
+                                    .font(AppFont.buyIn)
+                                    .monospacedDigit()
+                                    .foregroundStyle(AppColor.Chip.red)
+                            }
+                            // $ OUT line
                             Text("+$\(r.cashed.formatted(.number))")
                                 .font(AppFont.buyIn)
                                 .monospacedDigit()
                                 .foregroundStyle(AppColor.Chip.green)
+                            // Hours annotation
+                            if let h = r.hoursPlayed, h > 0 {
+                                Text("\(formatHours(h))h")
+                                    .font(AppFont.meta)
+                                    .foregroundStyle(AppColor.Text.tertiary)
+                            }
                         }
                     }
                     .padding(.horizontal, AppSpacing.l)
@@ -164,5 +209,12 @@ struct PlayedTab: View {
                 }
             }
         }
+    }
+
+    private func formatHours(_ h: Double) -> String {
+        if h == h.rounded() {
+            return "\(Int(h))"
+        }
+        return String(format: "%.1f", h)
     }
 }

@@ -6,6 +6,8 @@ struct EventDetail: View {
     @Environment(\.dismiss) private var dismiss
     @State private var noteDraft: String = ""
     @State private var playedCashed: String = ""
+    @State private var playedEntries: String = "1"
+    @State private var playedHours: String = ""
     @State private var now: Date = Date()
     private let countdownTick = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -62,6 +64,10 @@ struct EventDetail: View {
             noteDraft = state.note(for: tournament.id) ?? ""
             if let existing = state.playedRecords().first(where: { $0.id == tournament.id }) {
                 playedCashed = String(existing.cashed)
+                playedEntries = String(existing.entries)
+                if let h = existing.hoursPlayed, h > 0 {
+                    playedHours = String(h)
+                }
             }
         }
     }
@@ -246,39 +252,67 @@ struct EventDetail: View {
                         if on {
                             state.recordPlayed(id: tournament.id,
                                                buyIn: tournament.buyInUSD ?? 0,
-                                               cashed: Int(playedCashed) ?? 0)
+                                               cashed: Int(playedCashed) ?? 0,
+                                               entries: max(1, Int(playedEntries) ?? 1),
+                                               hoursPlayed: Double(playedHours))
                         } else {
                             state.unrecordPlayed(id: tournament.id)
                         }
                     }
                 ))
-                HStack {
-                    Text("CASHED")
-                        .font(AppFont.sectionLabel)
-                        .tracking(1.4)
-                        .foregroundStyle(AppColor.Text.secondary)
-                    Spacer()
-                    TextField("0", text: $playedCashed)
-                        .keyboardType(.numberPad)
-                        .multilineTextAlignment(.trailing)
-                        .font(AppFont.buyIn)
-                        .monospacedDigit()
-                        .foregroundStyle(AppColor.Text.primary)
-                        .frame(maxWidth: 120)
-                        .padding(.horizontal, AppSpacing.s)
-                        .padding(.vertical, 6)
-                        .background(AppColor.cardSurface, in: RoundedRectangle(cornerRadius: AppRadius.badge))
-                        .overlay(RoundedRectangle(cornerRadius: AppRadius.badge)
-                            .strokeBorder(AppColor.Foil.muted, lineWidth: 0.5))
-                        .onChange(of: playedCashed) { _, new in
-                            if isPlayed {
-                                state.recordPlayed(id: tournament.id,
-                                                   buyIn: tournament.buyInUSD ?? 0,
-                                                   cashed: Int(new) ?? 0)
-                            }
+                playedInputRow(label: "CASHED", placeholder: "0", text: $playedCashed, keyboardType: .numberPad)
+                    .onChange(of: playedCashed) { _, new in
+                        if isPlayed {
+                            state.recordPlayed(id: tournament.id,
+                                               buyIn: tournament.buyInUSD ?? 0,
+                                               cashed: Int(new) ?? 0,
+                                               entries: max(1, Int(playedEntries) ?? 1),
+                                               hoursPlayed: Double(playedHours))
                         }
-                }
+                    }
+                playedInputRow(label: "ENTRIES", placeholder: "1", text: $playedEntries, keyboardType: .numberPad)
+                    .onChange(of: playedEntries) { _, new in
+                        if isPlayed {
+                            state.recordPlayed(id: tournament.id,
+                                               buyIn: tournament.buyInUSD ?? 0,
+                                               cashed: Int(playedCashed) ?? 0,
+                                               entries: max(1, Int(new) ?? 1),
+                                               hoursPlayed: Double(playedHours))
+                        }
+                    }
+                playedInputRow(label: "HOURS", placeholder: "0.0", text: $playedHours, keyboardType: .decimalPad)
+                    .onChange(of: playedHours) { _, new in
+                        if isPlayed {
+                            state.recordPlayed(id: tournament.id,
+                                               buyIn: tournament.buyInUSD ?? 0,
+                                               cashed: Int(playedCashed) ?? 0,
+                                               entries: max(1, Int(playedEntries) ?? 1),
+                                               hoursPlayed: Double(new))
+                        }
+                    }
             }
+        }
+    }
+
+    private func playedInputRow(label: String, placeholder: String, text: Binding<String>, keyboardType: UIKeyboardType) -> some View {
+        HStack {
+            Text(label)
+                .font(AppFont.sectionLabel)
+                .tracking(1.4)
+                .foregroundStyle(AppColor.Text.secondary)
+            Spacer()
+            TextField(placeholder, text: text)
+                .keyboardType(keyboardType)
+                .multilineTextAlignment(.trailing)
+                .font(AppFont.buyIn)
+                .monospacedDigit()
+                .foregroundStyle(AppColor.Text.primary)
+                .frame(maxWidth: 120)
+                .padding(.horizontal, AppSpacing.s)
+                .padding(.vertical, 6)
+                .background(AppColor.cardSurface, in: RoundedRectangle(cornerRadius: AppRadius.badge))
+                .overlay(RoundedRectangle(cornerRadius: AppRadius.badge)
+                    .strokeBorder(AppColor.Foil.muted, lineWidth: 0.5))
         }
     }
 
