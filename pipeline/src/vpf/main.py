@@ -21,22 +21,11 @@ def build_feed(xlsx_path: Path, venues_yml: Path, out_dir: Path) -> None:
     venues = load_venues(venues_yml)
     venues = merge_pdf_urls(venues, discovered_urls)
 
-    # Extract per-event hyperlinks from the Schedule tab and attach to tournaments.
-    event_links = extract_event_hyperlinks(wb_links["Schedule 2026"])
-    enriched: list[Tournament] = []
-    for t in tournaments:
-        key = (t.venue_display, t.date_pt, t.event_name)
-        url = event_links.get(key)
-        if url is None:
-            # Try with stripped whitespace in case of trailing spaces in the sheet.
-            key2 = (t.venue_display, t.date_pt, t.event_name.strip())
-            url = event_links.get(key2)
-        if url is not None:
-            enriched.append(dataclasses.replace(t, structure_pdf_url=url))
-        else:
-            enriched.append(t)
-    tournaments = enriched
-
+    # Build the venue-display -> slug lookup FIRST so we can normalize both sides
+    # of the per-event hyperlink join through slugs. (The List tab calls the WSOP
+    # venue "WSOP", but the Schedule tab header is "WSOP Paris/Horseshoe" — and
+    # similar for Aria, MGM, Golden Nugget. Without slug normalisation those
+    # venues miss the join entirely.)
     venue_slug_lookup: dict[str, str] = {}
     for t in tournaments:
         if t.venue_display in venue_slug_lookup:
@@ -50,6 +39,29 @@ def build_feed(xlsx_path: Path, venues_yml: Path, out_dir: Path) -> None:
                 issue=f"unknown venue: {t.venue_display!r}",
                 raw_row=(t.venue_display,),
             ))
+
+    # Extract per-event hyperlinks, re-keying from (schedule-venue-display, date, event)
+    # to (slug, date, event) using the same slug resolver.
+    raw_event_links = extract_event_hyperlinks(wb_links["Schedule 2026"])
+    event_links_by_slug: dict[tuple[str, "object", str], str] = {}
+    for (sched_venue, day, ev_name), url in raw_event_links.items():
+        slug = slug_for_venue_display(sched_venue, venues)
+        if not slug:
+            continue
+        event_links_by_slug[(slug, day, ev_name.strip())] = url
+
+    # Attach per-event PDF URL to each tournament via the slug-keyed lookup.
+    enriched: list[Tournament] = []
+    for t in tournaments:
+        slug = venue_slug_lookup.get(t.venue_display)
+        url: str | None = None
+        if slug:
+            url = event_links_by_slug.get((slug, t.date_pt, t.event_name.strip()))
+        if url is not None:
+            enriched.append(dataclasses.replace(t, structure_pdf_url=url))
+        else:
+            enriched.append(t)
+    tournaments = enriched
 
     now = datetime.now(timezone.utc).replace(tzinfo=None)  # plain UTC for ISO 'Z'
 
