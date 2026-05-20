@@ -20,7 +20,6 @@
 		1A8D610DA683C5B55715D37A /* CountdownBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA592CD15473B9A7408DD7 /* CountdownBadge.swift */; };
 		1CC8638E8B25BDEA5BD8735B /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ACAAE18D72834DA38B3D26 /* AppButton.swift */; };
 		208A49D47956B872749FBE79 /* AppSheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B5152E2F365F533C8DD4D /* AppSheetHeader.swift */; };
-		24B7D3FEBD30AA9F9754990A /* DayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79E122638CF34C56BC54D6 /* DayHeader.swift */; };
 		24BB36ACDD86ED174A602B27 /* Inter-OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44BE4A300115873E6FB2188C /* Inter-OFL.txt */; };
 		28A5C8B0D81B387BF7FB94DC /* ScheduleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFAA3464A33A399EDA21853 /* ScheduleTab.swift */; };
 		2A44D6D6F439DD9AC0A6E061 /* GameCategoryStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827494EA765301AA54437E1 /* GameCategoryStyle.swift */; };
@@ -75,7 +74,6 @@
 		EB35CA7B4CD6AA1B243DA181 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A3C1DFF2ED31E56707EB1 /* Config.swift */; };
 		EF710F076A2768C27005E8B1 /* AppToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6ADD0186A392F32C497200 /* AppToggle.swift */; };
 		F0309BEA74014BA6549A5F17 /* AppEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE3A8EC99E38440C649A16 /* AppEmptyState.swift */; };
-		F078C2AE87C4B502E080FD88 /* GameCategoryChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6BC2086D728A099FE0D7B /* GameCategoryChip.swift */; };
 		F165CACE93916BA0FEAEE9CB /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BFB5DA9C4525FA344D2637 /* AppFont.swift */; };
 		F5C01AAB4B4C2228698D3773 /* FeedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C59425EB78D5C34CF7C87C /* FeedClient.swift */; };
 		F5C9F1C35F1667E07A5FF6C1 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C64222180623CB93D2F2E4C /* Tournament.swift */; };
@@ -103,7 +101,6 @@
 		15D103C4F53B2F1FD4538F36 /* AppSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSpacing.swift; sourceTree = "<group>"; };
 		17D17C3992BDD3E609F4875C /* Fraunces.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fraunces.ttf; sourceTree = "<group>"; };
 		1827494EA765301AA54437E1 /* GameCategoryStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoryStyle.swift; sourceTree = "<group>"; };
-		18C6BC2086D728A099FE0D7B /* GameCategoryChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoryChip.swift; sourceTree = "<group>"; };
 		1E390ACDBF56732C2089CCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2172EAB7CDE6FD544C2F5D6E /* AppDayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDayHeader.swift; sourceTree = "<group>"; };
 		233AD99689C3C08AD818BE8B /* ReEntryFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEntryFormatterTests.swift; sourceTree = "<group>"; };
@@ -168,7 +165,6 @@
 		DE22E033BE6AC9414257BC31 /* VenueChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueChip.swift; sourceTree = "<group>"; };
 		EAF56CCBBCD8A3AA7F8DD472 /* FilterPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPredicate.swift; sourceTree = "<group>"; };
 		EB6ADD0186A392F32C497200 /* AppToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToggle.swift; sourceTree = "<group>"; };
-		EC79E122638CF34C56BC54D6 /* DayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHeader.swift; sourceTree = "<group>"; };
 		F359106E6F79F2E4736A8B11 /* FeedDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDecoder.swift; sourceTree = "<group>"; };
 		F3763548ECCCD6932725B5DE /* venues_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venues_seed.json; sourceTree = "<group>"; };
 		F5C1A50AEF7B7A8916E9ACD6 /* MyScheduleTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleTab.swift; sourceTree = "<group>"; };
@@ -234,9 +230,7 @@
 		80554B8509EFFA77E8DFBE01 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EC79E122638CF34C56BC54D6 /* DayHeader.swift */,
 				995950090B9F7FBC85DDF378 /* EventRow.swift */,
-				18C6BC2086D728A099FE0D7B /* GameCategoryChip.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -517,7 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\ncd \"/Users/gyndok/Developer/VegasPokerGuide/ios\"\nPBXPROJ=\"/Users/gyndok/Developer/VegasPokerGuide/ios/VegasPokerGuide.xcodeproj/project.pbxproj\"\nNEEDS_REGEN=0\nif [ ! -f \"$PBXPROJ\" ] || [ \"project.yml\" -nt \"$PBXPROJ\" ]; then\n  NEEDS_REGEN=1\nelif find Sources Tests -type d -newer \"$PBXPROJ\" -print -quit 2>/dev/null | grep -q .; then\n  NEEDS_REGEN=1\nfi\nif [ \"$NEEDS_REGEN\" = \"0\" ]; then exit 0; fi\nif command -v xcodegen >/dev/null 2>&1; then XCODEGEN=xcodegen\nelif [ -x /opt/homebrew/bin/xcodegen ]; then XCODEGEN=/opt/homebrew/bin/xcodegen\nelif [ -x /usr/local/bin/xcodegen ]; then XCODEGEN=/usr/local/bin/xcodegen\nelse echo \"warning: install xcodegen via 'brew install xcodegen'\"; exit 0; fi\n\"$XCODEGEN\" generate\necho \"warning: Regenerated VegasPokerGuide.xcodeproj — close and reopen if files appear missing.\"\n";
+			shellScript = "set -e\ncd \"${SRCROOT}\"\nPBXPROJ=\"${SRCROOT}/VegasPokerGuide.xcodeproj/project.pbxproj\"\nNEEDS_REGEN=0\nif [ ! -f \"$PBXPROJ\" ] || [ \"project.yml\" -nt \"$PBXPROJ\" ]; then\n  NEEDS_REGEN=1\nelif find Sources Tests -type d -newer \"$PBXPROJ\" -print -quit 2>/dev/null | grep -q .; then\n  NEEDS_REGEN=1\nfi\nif [ \"$NEEDS_REGEN\" = \"0\" ]; then exit 0; fi\nif command -v xcodegen >/dev/null 2>&1; then XCODEGEN=xcodegen\nelif [ -x /opt/homebrew/bin/xcodegen ]; then XCODEGEN=/opt/homebrew/bin/xcodegen\nelif [ -x /usr/local/bin/xcodegen ]; then XCODEGEN=/usr/local/bin/xcodegen\nelse echo \"warning: install xcodegen via 'brew install xcodegen'\"; exit 0; fi\n\"$XCODEGEN\" generate\necho \"warning: Regenerated VegasPokerGuide.xcodeproj — close and reopen if files appear missing.\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -565,7 +559,6 @@
 				FAEF8EB1C4A6E8BF25ADC050 /* ConflictDetector.swift in Sources */,
 				1A8D610DA683C5B55715D37A /* CountdownBadge.swift in Sources */,
 				8FB8AA94C3C3BACAF876E44E /* CountdownState.swift in Sources */,
-				24B7D3FEBD30AA9F9754990A /* DayHeader.swift in Sources */,
 				2D0CA465517BFD247F2877EA /* EventDetail.swift in Sources */,
 				5298FE2E403152E170C7E282 /* EventRow.swift in Sources */,
 				0C90E058C33C7EF43BA5B627 /* FavoritesStore.swift in Sources */,
@@ -576,7 +569,6 @@
 				511CBF0EBA652AAEA2B3D0D7 /* FilterPredicate.swift in Sources */,
 				60524830626F3B60227FAFCB /* FiltersSheet.swift in Sources */,
 				DE076B3116D623998A66583E /* GameCategory.swift in Sources */,
-				F078C2AE87C4B502E080FD88 /* GameCategoryChip.swift in Sources */,
 				2A44D6D6F439DD9AC0A6E061 /* GameCategoryStyle.swift in Sources */,
 				0832A5A8D5F92187B43DAA88 /* GameChip.swift in Sources */,
 				9AAD7C26E2B1D07176CA5460 /* MapsLauncher.swift in Sources */,
