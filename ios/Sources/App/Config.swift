@@ -3,7 +3,7 @@ import Foundation
 enum Config {
     /// Set this to your published feed root, e.g. "https://gyndok.github.io/VegasPokerGuide".
     /// Leave empty during local development — the app will load from the bundled seed.
-    static let feedBaseURL: String = ""
+    static let feedBaseURL: String = "https://gyndok.github.io/VegasPokerGuide"
 
     private static func url(forFile filename: String) -> URL? {
         guard !feedBaseURL.isEmpty, let base = URL(string: feedBaseURL) else { return nil }

@@ -9,8 +9,8 @@ settings:
     SWIFT_VERSION: "5.10"
     DEVELOPMENT_TEAM: "NJ4JGW72MW"  # Geffrey Klein
     CODE_SIGN_STYLE: Automatic
-    MARKETING_VERSION: "1.2"
-    CURRENT_PROJECT_VERSION: "3"
+    MARKETING_VERSION: "1.3"
+    CURRENT_PROJECT_VERSION: "6"
     SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
 targets:
   VegasPokerGuide:
