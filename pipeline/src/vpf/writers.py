@@ -29,6 +29,11 @@ def _t_to_dict(t: Tournament, venue_slug: str) -> dict:
         "is_day2": t.is_day2,
         "flight_group": t.flight_group,
         "structure_pdf_url": t.structure_pdf_url,
+        "starting_stack": t.starting_stack,
+        "level_minutes": t.level_minutes,
+        "handed": t.handed,
+        "rake_usd": t.rake_usd,
+        "rake_pct": t.rake_pct,
         "notes": None,
     }
 

@@ -45,6 +45,7 @@ struct EventDetail: View {
                         headerChips(venue: venue)
                         eventTitle
                         statsGrid
+                        detailsSection
                         if liveState.isVisible { liveCountdownCard(liveState: liveState) }
                         reEntryRow
                         actionsSection(venue: venue)
@@ -130,6 +131,52 @@ struct EventDetail: View {
                     .lineLimit(2)
                     .minimumScaleFactor(0.7)
             }
+        }
+    }
+
+    // MARK: - Wizardofviz enrichment details section
+
+    @ViewBuilder
+    private var detailsSection: some View {
+        let hasAny = tournament.startingStack != nil
+            || tournament.levelMinutes != nil
+            || tournament.handed != nil
+            || tournament.rakeUSD != nil
+        if hasAny {
+            VStack(spacing: AppSpacing.m) {
+                HStack(spacing: AppSpacing.m) {
+                    detailCell(label: "STARTING STACK",
+                               value: tournament.startingStack.map { $0.formatted(.number) } ?? "—")
+                    detailCell(label: "LEVEL LENGTH",
+                               value: tournament.levelMinutes ?? "—")
+                }
+                HStack(spacing: AppSpacing.m) {
+                    detailCell(label: "HANDED",
+                               value: tournament.handed.map { "\($0)-max" } ?? "—")
+                    detailCell(label: "RAKE",
+                               value: rakeText)
+                }
+            }
+        }
+    }
+
+    private var rakeText: String {
+        guard let usd = tournament.rakeUSD else { return "—" }
+        if let pct = tournament.rakePct {
+            return "$\(Int(usd)) (\(Int(pct * 100))%)"
+        }
+        return "$\(Int(usd))"
+    }
+
+    @ViewBuilder
+    private func detailCell(label: String, value: String) -> some View {
+        SectionCard(title: label) {
+            Text(value)
+                .font(AppFont.buyInLarge)
+                .monospacedDigit()
+                .foregroundStyle(AppColor.Text.primary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
         }
     }
 

@@ -15,6 +15,12 @@ struct Tournament: Codable, Identifiable, Hashable {
     let isDay2: Bool
     let flightGroup: String
     let structurePDFURL: String?    // per-event PDF; nil falls back to venue URL
+    // Wizardofviz enrichment — nil if no match was found.
+    let startingStack: Int?
+    let levelMinutes: String?
+    let handed: Int?
+    let rakeUSD: Double?
+    let rakePct: Double?
     let notes: String?
 
     enum CodingKeys: String, CodingKey {
@@ -31,6 +37,11 @@ struct Tournament: Codable, Identifiable, Hashable {
         case isDay2 = "is_day2"
         case flightGroup = "flight_group"
         case structurePDFURL = "structure_pdf_url"
+        case startingStack = "starting_stack"
+        case levelMinutes = "level_minutes"
+        case handed
+        case rakeUSD = "rake_usd"
+        case rakePct = "rake_pct"
         case notes
     }
 }

@@ -17,6 +17,11 @@
       "is_day2": false,
       "flight_group": "NLH",
       "structure_pdf_url": "https://example.com/per-event.pdf",
+      "starting_stack": 25000,
+      "level_minutes": "30min",
+      "handed": 9,
+      "rake_usd": 60.0,
+      "rake_pct": 0.1,
       "notes": null
     },
     {
@@ -34,6 +39,11 @@
       "is_day2": true,
       "flight_group": "NLH",
       "structure_pdf_url": null,
+      "starting_stack": null,
+      "level_minutes": null,
+      "handed": null,
+      "rake_usd": null,
+      "rake_pct": null,
       "notes": null
     }
   ]

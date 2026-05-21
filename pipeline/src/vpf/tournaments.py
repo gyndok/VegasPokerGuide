@@ -25,6 +25,11 @@ class Tournament:
     is_day2: bool
     flight_group: str
     structure_pdf_url: Optional[str] = None
+    starting_stack: Optional[int] = None
+    level_minutes: Optional[str] = None     # e.g., "30/40min" — keep as string, not int
+    handed: Optional[int] = None            # 6, 7, 8, 9
+    rake_usd: Optional[float] = None
+    rake_pct: Optional[float] = None        # 0.0-1.0
 
 
 @dataclass(frozen=True)

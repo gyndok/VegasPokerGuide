@@ -8,7 +8,9 @@ final class ConflictDetectorTests: XCTestCase {
                    game: "NLH", gameCategory: .nlh, eventName: id,
                    buyInUSD: 600, guaranteeUSD: nil,
                    reEntry: ReEntry(type: .unlimited, count: nil, raw: "UL"),
-                   isDay2: false, flightGroup: "NLH", structurePDFURL: nil, notes: nil)
+                   isDay2: false, flightGroup: "NLH", structurePDFURL: nil,
+                   startingStack: nil, levelMinutes: nil, handed: nil, rakeUSD: nil, rakePct: nil,
+                   notes: nil)
     }
 
     func testNoOverlap() {
@@ -34,7 +36,9 @@ final class ConflictDetectorTests: XCTestCase {
         b = Tournament(id: "b", venue: "wynn", datePT: now, startAtPT: nil, lateRegCloseAtPT: nil,
                        game: "NLH", gameCategory: .nlh, eventName: "b", buyInUSD: nil, guaranteeUSD: nil,
                        reEntry: ReEntry(type: .unknown, count: nil, raw: ""), isDay2: false, flightGroup: "",
-                       structurePDFURL: nil, notes: nil)
+                       structurePDFURL: nil,
+                       startingStack: nil, levelMinutes: nil, handed: nil, rakeUSD: nil, rakePct: nil,
+                       notes: nil)
         XCTAssertEqual(ConflictDetector.findConflicts(in: [a, b]).count, 0)
     }
 }
