@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-09T01:47:32Z",
-  "source_sheet_updated_at": "2026-07-09T01:47:13Z",
+  "generated_at": "2026-07-12T20:34:31Z",
+  "source_sheet_updated_at": "2026-07-12T20:34:11Z",
   "tournaments": [
     {
       "id": "venetian-2026-05-18-nlh-1a",
@@ -27021,7 +27021,7 @@
       "venue": "aria",
       "date_pt": "2026-07-12",
       "start_at_pt": "2026-07-12T11:00:00-07:00",
-      "late_reg_close_at_pt": null,
+      "late_reg_close_at_pt": "2026-07-12T15:40:00-07:00",
       "game": "NLH",
       "game_category": "nlh",
       "event_name": "NLH",

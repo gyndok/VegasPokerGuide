@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T01:47:32Z",
+  "generated_at": "2026-07-12T20:34:31Z",
   "warnings": [
     {
       "row": 61,
@@ -693,12 +693,12 @@
     },
     {
       "row": 1013,
-      "issue": "unparseable LR: 'Day 2\\n14:15'",
+      "issue": "unparseable LR: 'Day 2\\n13:20'",
       "raw_row": [
         "2026-07-10T00:00:00",
         "WSOP",
         "12:00:00",
-        "Day 2\n14:15",
+        "Day 2\n13:20",
         "NLH",
         "NLH Midstakes Championship 1C",
         3000.0,
